@@ -1,0 +1,384 @@
+/* ============================================================
+   UIFCE · Apoyos Académicos — pantalla de acceso
+   Sistema de tokens propio de esta pantalla (deliberadamente
+   distinto del resto del sitio): réplica fiel de un lenguaje
+   visual de login/landing institucional — olive + teal, tarjeta
+   flotante, header curvo, insignia circular, botón píldora.
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --brand-olive: #677d29;
+  --brand-olive-deep: #4c5c1e;
+  --text-title: #003241;
+  --text-subtitle: #005e6f;
+  --overlay-tint: #00566f80;
+  --surface-card: #fafafa;
+  --surface-page: #f6f6f6;
+  --border-muted: #a7a7a7;
+  --text-body: #262626;
+
+  /* Semánticos (estado, no marca) */
+  --success-1: #19784b;
+  --success-2: #36b377;
+  --warning-1: #d49d00;
+  --warning-2: #f2bf2e;
+  --error-1: #aa0c00;
+  --error-2: #ff1200;
+  --info-1: #016d84;
+  --info-2: #2bb4cb;
+
+  --font-brand: "Ancizar Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Lienzo de pantalla completa
+   ============================================================ */
+
+.screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Fondo fotográfico + overlay de color al 50% de alpha.
+   Sustituye por una imagen real de campus con:
+   background-image: linear-gradient(var(--overlay-tint), var(--overlay-tint)), url("tu-foto.jpg");
+   Mientras tanto, un degradado en la misma paleta simula la
+   atmósfera sin usar una fotografía de origen desconocido. */
+.bg-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--overlay-tint), var(--overlay-tint)),
+    radial-gradient(120% 90% at 15% 0%, #3a5f6b 0%, transparent 55%),
+    radial-gradient(120% 100% at 100% 100%, var(--brand-olive-deep) 0%, transparent 60%),
+    linear-gradient(160deg, #0d3b47 0%, #14303a 45%, #1c2b22 100%);
+}
+
+/* ============================================================
+   Header curvo
+   ============================================================ */
+
+.header-zone {
+  position: relative;
+  z-index: 1;
+}
+
+.header-curve {
+  background: var(--brand-olive);
+  border-radius: 0 0 40px 0;
+  padding: 34px 24px 74px;
+  margin-bottom: -34px;
+}
+
+.header-curve-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 116px;
+}
+
+.header-kicker {
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.header-name {
+  margin: 2px 0 0;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.badge-circle {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-circle img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   Tarjeta central
+   ============================================================ */
+
+.card-wrap {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card-stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Uifcito, la mascota de la UIFCE: saluda anclado al borde derecho
+   de la pantalla, fuera de la tarjeta, para no tapar información.
+   Solo aparece cuando hay espacio de sobra a los lados (escritorio
+   amplio); en tablet/móvil, donde la tarjeta ocupa casi todo el
+   ancho, se oculta por completo. */
+.mascot {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mascot {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 28px;
+    z-index: 3;
+    width: 120px;
+    height: auto;
+    transform: translateY(-50%) rotate(-8deg);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media (min-width: 1280px) {
+  .mascot {
+    right: 56px;
+    width: 140px;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  background: var(--surface-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .card { padding: 28px; }
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  color: var(--text-title);
+  text-wrap: balance;
+}
+
+.card .subtitle {
+  margin: -6px 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-subtitle);
+  text-wrap: balance;
+}
+
+.card p.body-text {
+  margin: 4px 0 0;
+  max-width: 46ch;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+/* ============================================================
+   Checkbox de términos
+   ============================================================ */
+
+.consent {
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+
+.consent input[type="checkbox"] {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  accent-color: var(--brand-olive);
+}
+
+.consent label {
+  font-size: 13px;
+  color: var(--text-body);
+}
+
+.consent a {
+  color: var(--text-subtitle);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Botón principal (píldora)
+   ============================================================ */
+
+.btn-pill {
+  margin-top: 4px;
+  height: 44px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 0.8px solid var(--border-muted);
+  border-radius: 999px;
+  color: var(--text-body);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
+}
+
+.btn-pill:hover:not(:disabled) {
+  border-color: var(--brand-olive);
+}
+
+.btn-pill:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-pill:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-pill svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.footer-login {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  background: var(--brand-olive-deep);
+  color: #fff;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer-inner h3 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.footer-inner p,
+.footer-inner ul {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.footer-inner ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-inner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Banner institucional
+   ============================================================ */
+
+.banner-institucional {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .header-curve-inner {
+    padding-left: 0;
+    padding-top: 56px;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso — Apoyos Académicos UIFCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="acceso.css">
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="bg-photo" aria-hidden="true"></div>
+
+  <div class="header-zone">
+    <div class="badge-circle">
+      <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
+    </div>
+    <header class="header-curve">
+      <div class="header-curve-inner">
+        <p class="header-kicker">Universidad Nacional de Colombia</p>
+        <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+      </div>
+    </header>
+  </div>
+
+  <main class="card-wrap">
+    <div class="card-stage">
+      <img class="mascot" src="assets/uifcito.png" alt="Uifcito, la mascota de la UIFCE, saludando">
+      <section class="card">
+        <h1>Apoyos Académicos</h1>
+        <p class="subtitle">UIFCE — Unidad de Informática de la Facultad de Ciencias Económicas</p>
+        <p class="body-text">
+          Antes de continuar, confirma que autorizas el tratamiento de tus datos personales
+          para gestionar tu solicitud de Apoyo Académico ante la Unidad de Informática.
+        </p>
+
+        <div class="consent">
+          <input type="checkbox" id="consent-checkbox">
+          <label for="consent-checkbox">
+            He leído y acepto la <a href="#">Política de Tratamiento de Datos Personales</a>
+            y los <a href="#">Términos de solicitud</a> de la Universidad Nacional de Colombia.
+          </label>
+        </div>
+
+        <button type="button" class="btn-pill" id="continue-btn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+          Continuar
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer-login">
+    <div class="footer-inner">
+      <div>
+        <h3>UIFCE</h3>
+        <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
+      </div>
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="index.html">Apoyos Académicos</a></li>
+          <li><a href="catalogo.html">Catálogo de software</a></li>
+          <li><a href="rutas.html">Rutas por área</a></li>
+          <li><a href="solicitar.html">Cómo solicitar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Aviso</h3>
+        <p>Se pueden solicitar máximo cinco Apoyos Académicos por materia cada semestre, sujeto a disponibilidad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
+
+</div>
+
+<script src="acceso.js"></script>
+</body>
+</html>

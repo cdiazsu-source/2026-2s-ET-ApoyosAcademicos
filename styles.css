@@ -1,0 +1,934 @@
+/* ============================================================
+   UIFCE · Apoyos Académicos — sistema de diseño único
+   Mismo lenguaje visual que la pantalla de acceso: olive + teal,
+   header curvo con insignia circular, tarjetas flotantes, botón
+   píldora, tipografía Ancizar Sans y franja institucional al pie.
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --brand-olive: #677d29;
+  --brand-olive-deep: #4c5c1e;
+  --text-title: #003241;
+  --text-subtitle: #005e6f;
+  --overlay-tint: #00566f80;
+  --surface-card: #fafafa;
+  --surface-page: #f6f6f6;
+  --border-muted: #a7a7a7;
+  --border-soft: #dedede;
+  --text-body: #262626;
+  --text-body-muted: #5a5a5a;
+
+  /* Semánticos (estado, no marca) */
+  --success-1: #19784b;
+  --success-2: #36b377;
+  --warning-1: #d49d00;
+  --warning-2: #f2bf2e;
+  --error-1: #aa0c00;
+  --error-2: #ff1200;
+  --info-1: #016d84;
+  --info-2: #2bb4cb;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --radius-full: 999px;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --font-brand: "Ancizar Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.14), 0 14px 28px rgba(0, 0, 0, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-brand);
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-wrap: balance;
+  margin: 0;
+  color: var(--text-title);
+}
+
+p { margin: 0; }
+
+a { color: var(--text-subtitle); }
+
+:focus-visible {
+  outline: 2px solid var(--brand-olive);
+  outline-offset: 2px;
+}
+
+code { font-family: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Header curvo institucional (franja) + insignia
+   ============================================================ */
+
+.header-zone {
+  position: relative;
+  z-index: 5;
+}
+
+.header-curve {
+  background: var(--brand-olive);
+  border-radius: 0 0 40px 0;
+  padding: 34px 24px 30px;
+}
+
+.header-curve-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 116px;
+}
+
+.header-kicker {
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.header-name {
+  margin: 2px 0 0;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.badge-circle {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  z-index: 6;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-circle img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   Nav de páginas (pastillas)
+   ============================================================ */
+
+.site-nav {
+  position: relative;
+  z-index: 4;
+  background: var(--surface-card);
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.site-nav-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 12px 24px;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  color: var(--text-title);
+  text-decoration: none;
+}
+
+.site-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.site-nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-body-muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  transition: color 0.15s var(--ease-out-strong), background-color 0.15s var(--ease-out-strong);
+}
+
+.site-nav-links a:hover {
+  color: var(--brand-olive-deep);
+  background: #eef1e4;
+}
+
+.site-nav-links a[aria-current="page"] {
+  color: #fff;
+  background: var(--brand-olive);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Intro de página (tarjeta tipo "card" de acceso)
+   ============================================================ */
+
+.masthead {
+  padding: 28px 0 0;
+}
+
+.masthead-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--surface-card);
+  color: var(--text-body);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 30px 32px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-subtitle);
+}
+
+.masthead h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.15;
+  color: var(--text-title);
+}
+
+.masthead-sub {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 1rem;
+  color: var(--text-body-muted);
+}
+
+.masthead-sub a {
+  color: var(--text-subtitle);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   Stats
+   ============================================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat {
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--brand-olive);
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-body-muted);
+}
+
+/* ============================================================
+   Info sections (qué son / quiénes pueden / consideraciones)
+   ============================================================ */
+
+.info-section {
+  margin-top: 40px;
+}
+
+.info-section h2 {
+  font-size: 1.3rem;
+}
+
+.info-lead {
+  margin-top: 10px;
+  max-width: 74ch;
+  color: var(--text-body);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 20px 20px 20px 26px;
+  position: relative;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--brand-olive);
+}
+
+.info-card.warn::before { background: var(--warning-1); }
+.info-card.vino::before { background: var(--error-1); }
+
+.info-card h3 {
+  font-size: 1.02rem;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: var(--text-body-muted);
+  font-size: 0.92rem;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-body-muted);
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ============================================================
+   Launch / hub picker (landing page)
+   ============================================================ */
+
+.launch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.launch-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 22px 22px 22px 28px;
+  text-decoration: none;
+  color: var(--text-body);
+  transition: transform 0.2s var(--ease-out-strong), box-shadow 0.2s var(--ease-out-strong), border-color 0.2s var(--ease-out-strong);
+}
+
+.launch-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--brand-olive);
+}
+
+.launch-card.special::before { background: var(--error-1); }
+.launch-card.map::before     { background: var(--info-1); }
+
+.launch-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-olive);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.launch-card:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: var(--shadow-card);
+}
+
+.launch-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-body-muted);
+}
+
+.launch-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.22;
+}
+
+.launch-dates {
+  margin: -6px 0 0;
+  font-size: 0.88rem;
+  color: var(--text-body-muted);
+}
+
+.launch-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.launch-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.launch-stats .n {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand-olive);
+}
+
+.launch-stats .l {
+  font-size: 0.72rem;
+  color: var(--text-body-muted);
+}
+
+.launch-cta {
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-subtitle);
+}
+
+/* ============================================================
+   Toolbar
+   ============================================================ */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.toolbar input[type="search"],
+.toolbar select {
+  font-family: var(--font-brand);
+  font-size: 0.9rem;
+  height: 40px;
+  padding: 0 16px;
+  border: 0.8px solid var(--border-muted);
+  border-radius: var(--radius-full);
+  background: var(--surface-card);
+  color: var(--text-body);
+  transition: border-color 0.15s var(--ease-out-strong);
+}
+
+.toolbar input[type="search"]:hover,
+.toolbar select:hover {
+  border-color: var(--brand-olive);
+}
+
+.toolbar input[type="search"] {
+  flex: 1 1 240px;
+}
+
+.toolbar select {
+  flex: 0 1 240px;
+}
+
+.result-count {
+  margin: 14px 2px 0;
+  font-size: 0.85rem;
+  color: var(--text-body-muted);
+}
+
+/* ============================================================
+   Software grid & cards (catálogo)
+   ============================================================ */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.course-card {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 20px 20px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--area-accent, var(--brand-olive));
+}
+
+.card-eyebrow {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.area-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: var(--area-accent, var(--brand-olive));
+  color: var(--area-accent-foreground, #fff);
+}
+
+.card-title {
+  font-size: 1.12rem;
+  line-height: 1.28;
+}
+
+.card-desc {
+  margin: -4px 0 0;
+  font-size: 0.86rem;
+  color: var(--text-body-muted);
+}
+
+.card-meta {
+  margin: 4px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.card-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.88rem;
+}
+
+.card-meta dt {
+  color: var(--text-body-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card-meta dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.no-results {
+  margin-top: 28px;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-body-muted);
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+}
+
+/* ============================================================
+   Map section / rutas por área
+   ============================================================ */
+
+.map-page-tracks {
+  margin-top: 28px;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.track {
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 18px 20px;
+}
+
+.track-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--area-accent, var(--border-soft));
+  color: var(--text-title);
+}
+
+.track-count {
+  font-weight: 500;
+  color: var(--text-body-muted);
+  font-size: 0.78rem;
+}
+
+.track ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.track li {
+  font-size: 0.88rem;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--text-body);
+}
+
+.track li::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--area-accent, var(--brand-olive));
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   Steps (solicitar.html)
+   ============================================================ */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 22px 24px;
+}
+
+.step-num {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--brand-olive);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.step-body h3 {
+  font-size: 1.05rem;
+}
+
+.step-body p {
+  margin-top: 6px;
+  color: var(--text-body-muted);
+  font-size: 0.92rem;
+}
+
+.step-body ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--text-body-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.step-body ul.two-col {
+  columns: 2;
+  column-gap: 24px;
+}
+
+.step-form-cta {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--brand-olive);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 28px 30px;
+}
+
+.step-form-cta h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.step-form-cta p {
+  margin-top: 6px;
+  opacity: 0.92;
+  font-size: 0.92rem;
+  max-width: 46ch;
+}
+
+.note {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: #eef1e4;
+  color: var(--brand-olive-deep);
+  border-radius: var(--radius-lg);
+  font-size: 0.88rem;
+}
+
+.note a {
+  color: var(--brand-olive-deep);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Botón píldora (mismo componente que acceso.html)
+   ============================================================ */
+
+.btn-pill,
+.btn {
+  margin-top: 4px;
+  height: 44px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 0.8px solid var(--border-muted);
+  border-radius: var(--radius-full);
+  color: var(--text-body);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-pill:hover:not(:disabled),
+.btn:hover {
+  border-color: var(--brand-olive);
+  transform: translateY(-1px);
+}
+
+.btn-pill:active:not(:disabled),
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-pill:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-pill svg,
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   Footer institucional (mismo que acceso.html)
+   ============================================================ */
+
+.footer-login {
+  position: relative;
+  z-index: 1;
+  margin-top: 48px;
+  background: var(--brand-olive-deep);
+  color: #fff;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer-inner h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  color: #fff;
+}
+
+.footer-inner p,
+.footer-inner ul {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.footer-inner ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-inner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  text-decoration: underline;
+}
+
+.banner-institucional {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .masthead-inner { padding: 24px 22px; }
+  .step { flex-direction: column; gap: 10px; }
+  .step-body ul.two-col { columns: 1; }
+  .step-form-cta { flex-direction: column; align-items: flex-start; }
+  .header-curve-inner { padding-left: 0; padding-top: 56px; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   Áreas académicas — acento por categoría
+   (deriva siempre de la paleta institucional olive/teal)
+   ============================================================ */
+
+[data-area="Gestión Empresarial y ERP"] {
+  --area-accent: var(--error-1);
+  --area-accent-foreground: #fff;
+}
+[data-area="Análisis de Datos y ETL"] {
+  --area-accent: var(--brand-olive);
+  --area-accent-foreground: #fff;
+}
+[data-area="Programación"] {
+  --area-accent: var(--info-1);
+  --area-accent-foreground: #fff;
+}
+[data-area="Investigación Cualitativa"] {
+  --area-accent: var(--warning-1);
+  --area-accent-foreground: #fff;
+}
+[data-area="Creación de Textos"] {
+  --area-accent: var(--text-subtitle);
+  --area-accent-foreground: #fff;
+}
+[data-area="Presentaciones y Actividades Interactivas"] {
+  --area-accent: var(--success-1);
+  --area-accent-foreground: #fff;
+}
+[data-area="Vida Universitaria"] {
+  --area-accent: var(--brand-olive-deep);
+  --area-accent-foreground: #fff;
+}
+[data-area="Análisis Geográfico"] {
+  --area-accent: var(--success-2);
+  --area-accent-foreground: var(--text-title);
+}
+[data-area="Otros"] {
+  --area-accent: var(--border-muted);
+  --area-accent-foreground: var(--text-title);
+}
