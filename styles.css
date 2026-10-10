@@ -630,6 +630,12 @@ code { font-family: inherit; }
   color: var(--text-title);
 }
 
+.track-desc {
+  margin: -2px 0 12px;
+  font-size: 0.84rem;
+  color: var(--text-body-muted);
+}
+
 .track-count {
   font-weight: 500;
   color: var(--text-body-muted);
@@ -896,39 +902,23 @@ code { font-family: inherit; }
    (deriva siempre de la paleta institucional olive/teal)
    ============================================================ */
 
-[data-area="Gestión Empresarial y ERP"] {
+[data-area="Gestión y sistemas empresariales"] {
   --area-accent: var(--error-1);
   --area-accent-foreground: #fff;
 }
-[data-area="Análisis de Datos y ETL"] {
+[data-area="Análisis de datos y BI"] {
   --area-accent: var(--brand-olive);
   --area-accent-foreground: #fff;
 }
-[data-area="Programación"] {
+[data-area="Econometría y programación"] {
   --area-accent: var(--info-1);
   --area-accent-foreground: #fff;
 }
-[data-area="Investigación Cualitativa"] {
+[data-area="Investigación y escritura académica"] {
   --area-accent: var(--warning-1);
   --area-accent-foreground: #fff;
 }
-[data-area="Creación de Textos"] {
-  --area-accent: var(--text-subtitle);
-  --area-accent-foreground: #fff;
-}
-[data-area="Presentaciones y Actividades Interactivas"] {
+[data-area="Docencia y herramientas digitales"] {
   --area-accent: var(--success-1);
   --area-accent-foreground: #fff;
-}
-[data-area="Vida Universitaria"] {
-  --area-accent: var(--brand-olive-deep);
-  --area-accent-foreground: #fff;
-}
-[data-area="Análisis Geográfico"] {
-  --area-accent: var(--success-2);
-  --area-accent-foreground: var(--text-title);
-}
-[data-area="Otros"] {
-  --area-accent: var(--border-muted);
-  --area-accent-foreground: var(--text-title);
 }
