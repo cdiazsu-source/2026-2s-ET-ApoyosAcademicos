@@ -41,5 +41,13 @@
     el.addEventListener('input', applyFilters);
   });
 
+  // Las tarjetas de área del inicio enlazan con catalogo.html#<área>
+  var areaParam = decodeURIComponent(window.location.hash.slice(1));
+  if (areaParam) {
+    Array.prototype.forEach.call(areaSelect.options, function (opt) {
+      if (opt.value === areaParam) areaSelect.value = areaParam;
+    });
+  }
+
   applyFilters();
 })();

@@ -5,144 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apoyos Académicos — UIFCE</title>
 <meta name="description" content="Sesiones de acompañamiento y asesoría en software para el desarrollo de clases, ofrecidas por la Unidad de Informática de la Facultad de Ciencias Económicas (UIFCE).">
+<meta name="theme-color" content="#00005c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="poster">
 
-<div class="header-zone">
-  <div class="badge-circle">
-    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
-  </div>
-  <header class="header-curve">
-    <div class="header-curve-inner">
-      <p class="header-kicker">Universidad Nacional de Colombia</p>
-      <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+  <header class="poster-top">
+    <div class="top-card">
+      <p class="kicker">Para ti profe… y para tus estudiantes</p>
+      <p class="top-text">Solicita un <strong>apoyo académico</strong> para tu asignatura: llevamos la herramienta a tu grupo, de forma presencial o virtual.</p>
+    </div>
+    <a class="logo-tab" href="index.html" aria-label="UiFCE — Apoyos Académicos, ir al inicio">
+      <span class="logo-mark">UiFCE</span>
+      <span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span>
+    </a>
+    <div class="top-card">
+      <p class="kicker">¿Cómo solicitarlo?</p>
+      <ol class="mini-steps">
+        <li><span class="step-chip">1</span><span>Elige la<br>herramienta</span></li>
+        <li><span class="step-chip">2</span><span>Diligencia el<br>formulario</span></li>
+        <li><span class="step-chip">3</span><span>Agenda fecha<br>y espacio</span></li>
+      </ol>
     </div>
   </header>
+
+  <nav class="pill-nav" aria-label="Secciones del sitio">
+    <a href="index.html" aria-current="page">Inicio</a>
+    <a href="catalogo.html">Catálogo de software</a>
+    <a href="rutas.html">Rutas por área</a>
+    <a href="solicitar.html">Cómo solicitar</a>
+  </nav>
+
+  <main>
+
+    <section class="area-grid" aria-label="Áreas académicas">
+      <a class="area-card" data-area="Docencia y herramientas digitales" href="catalogo.html#Docencia%20y%20herramientas%20digitales">
+        <h2>Docencia y herramientas digitales</h2>
+        <p>Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la <strong>IA</strong> de forma responsable en tu docencia.</p>
+        <span class="area-link">8 softwares →</span>
+      </a>
+      <a class="area-card" data-area="Análisis de datos y BI" href="catalogo.html#An%C3%A1lisis%20de%20datos%20y%20BI">
+        <h2>Análisis de datos y BI</h2>
+        <p>Hojas de cálculo, bases de datos y tableros de BI para que tus estudiantes trabajen y visualicen información económica.</p>
+        <span class="area-link">8 softwares →</span>
+      </a>
+      <a class="area-card" data-area="Gestión y sistemas empresariales" href="catalogo.html#Gesti%C3%B3n%20y%20sistemas%20empresariales">
+        <h2>Gestión y sistemas empresariales</h2>
+        <p>Software contable, ERP y de procesos para llevar a la práctica tus clases de administración, contabilidad y gestión.</p>
+        <span class="area-link">6 softwares →</span>
+      </a>
+      <a class="area-card" data-area="Investigación y escritura académica" href="catalogo.html#Investigaci%C3%B3n%20y%20escritura%20acad%C3%A9mica">
+        <h2>Investigación y escritura académica</h2>
+        <p>Herramientas para redactar, referenciar y analizar información cualitativa o espacial en tus investigaciones y en las tesis que diriges.</p>
+        <span class="area-link">6 softwares →</span>
+      </a>
+      <a class="area-card" data-area="Econometría y programación" href="catalogo.html#Econometr%C3%ADa%20y%20programaci%C3%B3n">
+        <h2>Econometría y programación</h2>
+        <p>Lenguajes y paquetes estadísticos para llevar la econometría, la modelación y la ciencia de datos a tus cursos.</p>
+        <span class="area-link">4 softwares →</span>
+      </a>
+    </section>
+
+    <section class="stats" aria-label="Resumen de los Apoyos Académicos">
+      <div class="stat"><span class="stat-value">32</span><span class="stat-label">Softwares disponibles</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Áreas académicas</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Apoyos máx. por materia / semestre</span></div>
+      <div class="stat"><span class="stat-value">~5</span><span class="stat-label">Días hábiles de respuesta</span></div>
+    </section>
+
+    <section class="info-section" aria-label="Qué son los Apoyos Académicos">
+      <p class="kicker">Conoce el servicio</p>
+      <h2>¿Qué son los Apoyos Académicos?</h2>
+      <div class="card info-lead">
+        <p>Los Apoyos Académicos son un servicio prestado por la UIFCE que consiste en sesiones de acompañamiento y asesoría ofrecidas por estudiantes auxiliares. Durante la sesión, el estudiante auxiliar imparte una o más jornadas enfocadas en aspectos concretos del software requerido, o en su relación con los contenidos de la materia. El servicio se lleva a cabo en un espacio determinado y se ajusta a la solicitud y a los objetivos planteados por el profesor o administrativo interesado.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>¿Quiénes pueden solicitarlo?</h3>
+          <p>Profesores que dicten una materia de la FCE, administrativos, miembros de las Escuelas, miembros del área curricular de alguna de las carreras de la FCE, y estudiantes de posgrado de la facultad con el apoyo del área curricular o de algún profesor.</p>
+        </div>
+        <div class="info-card warn">
+          <h3>Consideraciones a tener en cuenta</h3>
+          <ul>
+            <li>Solicita con al menos dos (2) semanas de anticipación, para garantizar una adecuada organización.</li>
+            <li>El tiempo estimado de respuesta es de aproximadamente cinco (5) días hábiles.</li>
+            <li>Se pueden solicitar máximo cinco apoyos académicos por materia, y no por profesor o profesora, cada semestre.</li>
+            <li>La asignación está sujeta a la disponibilidad de salas, del software requerido y al volumen de solicitudes que gestiona la Unidad de Informática.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-row">
+      <a class="btn" href="catalogo.html">Ver catálogo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      <a class="btn ghost" href="rutas.html">Rutas por área</a>
+      <a class="btn ghost" href="solicitar.html">Cómo solicitar</a>
+    </div>
+
+  </main>
+
+  <section class="poster-bottom" aria-label="Contacto y solicitud">
+    <div class="help-card">
+      <p class="kicker">¿Tienes dudas sobre el proceso?</p>
+      <p class="help-text">No dudes en comunicarte al correo: <strong><a href="mailto:uniic_bog@unal.edu.co">uniic_bog@unal.edu.co</a></strong> o al <strong>Tel: 3165000 Ext: 12301</strong> o acércate a la <strong>oficina de la UIFCE - Edificio 310</strong>.</p>
+    </div>
+    <div class="cta-card">
+      <div class="cta-copy">
+        <p class="cta-title">¡Solicítalo aquí!</p>
+        <p class="cta-text">Solicítalo con dos semanas de anticipación.<br>*Máximo se brindan cinco apoyos por materia al semestre.</p>
+      </div>
+      <a class="qr-box" href="https://forms.gle/RLfbg7KAtprvs5PY9" target="_blank" rel="noopener" aria-label="Abrir el formulario de solicitud de Apoyos Académicos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span>Formulario de solicitud</span></a>
+      <div class="cta-robot" aria-hidden="true"><img src="assets/uifcito-cartelera.svg" alt=""></div>
+    </div>
+  </section>
+
+  <footer class="panel-foot">
+    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
+    <p>Universidad Nacional de Colombia · Unidad de Informática de la Facultad de Ciencias Económicas (UIFCE), sede Bogotá.</p>
+  </footer>
+
 </div>
-
-<nav class="site-nav">
-  <div class="wrap site-nav-inner">
-    <a class="brand" href="index.html">Apoyos Académicos</a>
-    <div class="site-nav-links">
-      <a href="index.html" aria-current="page">Inicio</a>
-      <a href="catalogo.html">Catálogo de software</a>
-      <a href="rutas.html">Rutas por área</a>
-      <a href="solicitar.html">Cómo solicitar</a>
-    </div>
-  </div>
-</nav>
-
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <p class="eyebrow">Unidad de Informática · Facultad de Ciencias Económicas · Universidad Nacional de Colombia</p>
-    <h1>Apoyos Académicos (AA)</h1>
-    <p class="masthead-sub">Sesiones de acompañamiento y asesoría en software, impartidas por estudiantes auxiliares, para apoyar el desarrollo de tus clases mediante la enseñanza o el refuerzo de herramientas aplicadas a las ciencias económicas o de propósito general.</p>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section class="stats" aria-label="Resumen de los Apoyos Académicos">
-    <div class="stat">
-      <span class="stat-value">32</span>
-      <span class="stat-label">Softwares disponibles</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">5</span>
-      <span class="stat-label">Áreas académicas</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">5</span>
-      <span class="stat-label">Apoyos máx. por materia / semestre</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">~5</span>
-      <span class="stat-label">Días hábiles de respuesta</span>
-    </div>
-  </section>
-
-  <section class="info-section" aria-label="Qué son los Apoyos Académicos">
-    <h2>¿Qué son los Apoyos Académicos?</h2>
-    <p class="info-lead">Los Apoyos Académicos son un servicio prestado por la UIFCE que consiste en sesiones de acompañamiento y asesoría ofrecidas por estudiantes auxiliares. Durante la sesión, el estudiante auxiliar imparte una o más jornadas enfocadas en aspectos concretos del software requerido, o en su relación con los contenidos de la materia. El servicio se lleva a cabo en un espacio determinado y se ajusta a la solicitud y a los objetivos planteados por el profesor o administrativo interesado.</p>
-
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>¿Quiénes pueden solicitarlo?</h3>
-        <p>Profesores que dicten una materia de la FCE, administrativos, miembros de las Escuelas, miembros del área curricular de alguna de las carreras de la FCE, y estudiantes de posgrado de la facultad con el apoyo del área curricular o de algún profesor.</p>
-      </div>
-      <div class="info-card warn">
-        <h3>Consideraciones a tener en cuenta</h3>
-        <ul>
-          <li>Solicita con al menos dos (2) semanas de anticipación, para garantizar una adecuada organización.</li>
-          <li>El tiempo estimado de respuesta es de aproximadamente cinco (5) días hábiles.</li>
-          <li>Se pueden solicitar máximo cinco apoyos académicos por materia, y no por profesor o profesora, cada semestre.</li>
-          <li>La asignación está sujeta a la disponibilidad de salas, del software requerido y al volumen de solicitudes que gestiona la Unidad de Informática.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="launch-grid" aria-label="Explora los Apoyos Académicos" style="margin-top:44px">
-
-    <a class="launch-card" href="catalogo.html">
-      <p class="launch-eyebrow">Catálogo</p>
-      <h3>Softwares para Apoyos Académicos</h3>
-      <p class="launch-dates">Filtra por área académica o busca por nombre</p>
-      <div class="launch-stats">
-        <div><span class="n">32</span><span class="l">softwares</span></div>
-        <div><span class="n">5</span><span class="l">áreas</span></div>
-      </div>
-      <span class="launch-cta">Ver catálogo →</span>
-    </a>
-
-    <a class="launch-card map" href="rutas.html">
-      <p class="launch-eyebrow">Referencia</p>
-      <h3>Rutas por área académica</h3>
-      <p class="launch-dates">Todo el catálogo agrupado por área temática</p>
-      <div class="launch-stats">
-        <div><span class="n">5</span><span class="l">áreas</span></div>
-      </div>
-      <span class="launch-cta">Explorar rutas →</span>
-    </a>
-
-    <a class="launch-card special" href="solicitar.html">
-      <p class="launch-eyebrow">Trámite</p>
-      <h3>Cómo solicitar un Apoyo Académico</h3>
-      <p class="launch-dates">Guía paso a paso y formulario de solicitud</p>
-      <div class="launch-stats">
-        <div><span class="n">5</span><span class="l">pasos</span></div>
-      </div>
-      <span class="launch-cta">Solicitar apoyo →</span>
-    </a>
-
-  </section>
-
-</main>
-
-<footer class="footer-login">
-  <div class="footer-inner">
-    <div>
-      <h3>UIFCE</h3>
-      <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
-    </div>
-    <div>
-      <h3>Explorar</h3>
-      <ul>
-        <li><a href="index.html">Apoyos Académicos</a></li>
-        <li><a href="catalogo.html">Catálogo de software</a></li>
-        <li><a href="rutas.html">Rutas por área</a></li>
-        <li><a href="solicitar.html">Cómo solicitar</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Aviso</h3>
-      <p>La asignación está sujeta a disponibilidad de salas, software y volumen de solicitudes gestionadas por la UIFCE.</p>
-    </div>
-  </div>
-</footer>
 
 <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
 

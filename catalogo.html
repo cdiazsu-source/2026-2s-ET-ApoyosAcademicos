@@ -4,145 +4,158 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catálogo de software — Apoyos Académicos UIFCE</title>
-<meta name="description" content="Catálogo de software disponible para Apoyos Académicos: temas, sesiones sugeridas y aporte a las asignaturas.">
+<meta name="description" content="Catálogo de software disponible para los Apoyos Académicos de la UIFCE, con temas, sesiones sugeridas y aporte a las asignaturas.">
+<meta name="theme-color" content="#00005c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="poster">
 
-<div class="header-zone">
-  <div class="badge-circle">
-    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
-  </div>
-  <header class="header-curve">
-    <div class="header-curve-inner">
-      <p class="header-kicker">Universidad Nacional de Colombia</p>
-      <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+  <header class="poster-top">
+    <div class="top-card">
+      <p class="kicker">Catálogo de software</p>
+      <p class="top-text">32 herramientas para llevar a tu clase. Filtra por área o busca por nombre.</p>
+    </div>
+    <a class="logo-tab" href="index.html" aria-label="UiFCE — Apoyos Académicos, ir al inicio">
+      <span class="logo-mark">UiFCE</span>
+      <span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span>
+    </a>
+    <div class="top-card">
+      <p class="kicker">¿Cómo solicitarlo?</p>
+      <ol class="mini-steps">
+        <li><span class="step-chip">1</span><span>Elige la<br>herramienta</span></li>
+        <li><span class="step-chip">2</span><span>Diligencia el<br>formulario</span></li>
+        <li><span class="step-chip">3</span><span>Agenda fecha<br>y espacio</span></li>
+      </ol>
     </div>
   </header>
-</div>
 
-<nav class="site-nav">
-  <div class="wrap site-nav-inner">
-    <a class="brand" href="index.html">Apoyos Académicos</a>
-    <div class="site-nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html" aria-current="page">Catálogo de software</a>
-      <a href="rutas.html">Rutas por área</a>
-      <a href="solicitar.html">Cómo solicitar</a>
-    </div>
-  </div>
-</nav>
+  <nav class="pill-nav" aria-label="Secciones del sitio">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html" aria-current="page">Catálogo de software</a>
+    <a href="rutas.html">Rutas por área</a>
+    <a href="solicitar.html">Cómo solicitar</a>
+  </nav>
 
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <p class="eyebrow">Unidad de Informática · Facultad de Ciencias Económicas · Universidad Nacional de Colombia</p>
-    <h1>Softwares para Apoyos Académicos</h1>
-    <p class="masthead-sub">Presiona sobre el software que te interese para conocer los temas que cubre, las sesiones sugeridas y su aporte a las asignaturas. Filtra por área académica o busca por nombre.</p>
-  </div>
-</header>
+  <main>
 
-<main class="wrap">
+    <section class="page-head">
+      <p class="kicker">Catálogo de software</p>
+      <h1>Softwares para Apoyos Académicos</h1>
+      <p>Conoce los temas que cubre cada software, las sesiones sugeridas y su aporte a las asignaturas. Filtra por área académica o busca por nombre.</p>
+    </section>
 
-  <section class="stats" aria-label="Resumen del catálogo">
-    <div class="stat">
-      <span class="stat-value">32</span>
-      <span class="stat-label">Softwares</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">5</span>
-      <span class="stat-label">Áreas académicas</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">1–2</span>
-      <span class="stat-label">Sesiones sugeridas por tema</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">5</span>
-      <span class="stat-label">Apoyos máx. por materia</span>
-    </div>
-  </section>
+    <section class="stats" aria-label="Resumen del catálogo">
+      <div class="stat"><span class="stat-value">32</span><span class="stat-label">Softwares</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Áreas académicas</span></div>
+      <div class="stat"><span class="stat-value">1–2</span><span class="stat-label">Sesiones sugeridas por tema</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Apoyos máx. por materia</span></div>
+    </section>
 
-  <section class="toolbar" aria-label="Filtros">
-    <input type="search" id="search" placeholder="Buscar por nombre de software…" aria-label="Buscar software">
-    <select id="filter-area" aria-label="Filtrar por área académica">
-      <option value="">Todas las áreas</option>
-      <option value="Gestión y sistemas empresariales">Gestión y sistemas empresariales</option>
-      <option value="Análisis de datos y BI">Análisis de datos y BI</option>
-      <option value="Econometría y programación">Econometría y programación</option>
-      <option value="Investigación y escritura académica">Investigación y escritura académica</option>
-      <option value="Docencia y herramientas digitales">Docencia y herramientas digitales</option>
-    </select>
-  </section>
+    <section class="toolbar" aria-label="Filtros" style="margin-top:clamp(22px,2.4vw,34px)">
+      <input type="search" id="search" placeholder="Buscar por nombre de software…" aria-label="Buscar software">
+      <select id="filter-area" aria-label="Filtrar por área académica">
+        <option value="">Todas las áreas</option>
+        <option value="Docencia y herramientas digitales">Docencia y herramientas digitales</option>
+        <option value="Análisis de datos y BI">Análisis de datos y BI</option>
+        <option value="Gestión y sistemas empresariales">Gestión y sistemas empresariales</option>
+        <option value="Investigación y escritura académica">Investigación y escritura académica</option>
+        <option value="Econometría y programación">Econometría y programación</option>
+      </select>
+    </section>
 
-  <p class="result-count" id="result-count" role="status"></p>
+    <p class="result-count" id="result-count" role="status"></p>
 
-  <section class="course-grid" id="course-grid" aria-label="Softwares disponibles">
+    <section class="course-grid" id="course-grid" aria-label="Softwares disponibles">
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="odoo erp codigo abierto ventas inventario contabilidad">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Odoo</h2>
-      <p class="card-desc">ERP de código abierto que permite aprender conceptos clave de gestión empresarial mediante ejercicios prácticos, integrando módulos como ventas, inventario y contabilidad en un solo sistema.</p>
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="moodle lms cursos tareas foros evaluaciones">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Moodle</h2>
+      <p class="card-desc">Sistema de gestión de aprendizaje (LMS) líder en educación virtual, usado por la universidad para administrar cursos, tareas, foros y evaluaciones.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a ERP · Creación de cuenta · Manejo de la interfaz · Creación de transacción · Procesos de negocios</dd></div>
+        <div><dt>Temas</dt><dd>Capacitación profesor · Capacitación estudiantes</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Familiarizarse con la página donde está todo el material académico de las distintas materias y cursos.</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="zoom videoconferencias clases virtuales webinar">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Zoom</h2>
+      <p class="card-desc">Plataforma líder en videoconferencias, con funciones para clases virtuales, reuniones colaborativas y webinars académicos.</p>
+      <dl class="card-meta">
+        <div><dt>Temas</dt><dd>Funcionalidades de Zoom</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Ante cualquier situación, poder virtualizar una clase o cualquier tipo de reunión.</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="microsoft teams reuniones canales office 365">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Microsoft Teams</h2>
+      <p class="card-desc">Plataforma integral que facilita el trabajo colaborativo, las reuniones virtuales, la comunicación y la organización de actividades, integrando Excel, OneNote y Planner.</p>
+      <dl class="card-meta">
+        <div><dt>Temas</dt><dd>Introducción a Microsoft Teams · Organización de equipos y canales · Comunicación efectiva (chat, reuniones y llamadas) · Colaboración en documentos (integración con Office 365)</dd></div>
         <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Facilita la comunicación y el trabajo colaborativo en clase y en equipos de trabajo.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="sap erp finanzas logistica recursos humanos">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">SAP</h2>
-      <p class="card-desc">Solución ERP líder para entender la gestión integral de negocios, explorando módulos especializados (finanzas, logística, RH) debido a su estructura compleja y profesional.</p>
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="google workspace gmail calendar meet drive documentos">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Google Workspace</h2>
+      <p class="card-desc">Herramienta intuitiva para crear sitios web colaborativos, ideal para portafolios académicos, proyectos grupales o recursos de clase.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a SAP · Contabilidad financiera · Ventas y Distribución · Gestión de materiales · Planificación de la producción · Costos · Gestión de activos empresariales · Gestión del Capital Humano · Gestión de proyectos · Gestión de Calidad · Gestión de almacenes · Gestión Ambiental</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por módulo</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
-      </dl>
-    </article>
-
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="siigo contable erp facturacion">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Siigo</h2>
-      <p class="card-desc">Software contable y ERP amigable, ideal para aprender fundamentos de facturación, reporting financiero y flujos de trabajo con una interfaz intuitiva.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Siigo</dd></div>
+        <div><dt>Temas</dt><dd>Gmail · Calendar · Keep · Meet · Formularios · Hojas de cálculo · Documentos · Tasks</dd></div>
         <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar la vida universitaria familiarizándose con todo lo que Google tiene para ofrecer.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="world office contable erp pymes">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">World Office</h2>
-      <p class="card-desc">Herramienta contable y ERP para gestionar procesos financieros básicos y avanzados, destacando por su interfaz visual y usos prácticos en pymes.</p>
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="h5p moodle contenido interactivo juegos flashcards">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">H5P</h2>
+      <p class="card-desc">Plataforma para desarrollar contenido interactivo en Moodle (videos con preguntas, flashcards, líneas de tiempo) sin necesidad de programación.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a World Office · Operaciones contables y comerciales · Contabilidad y reportes financieros</dd></div>
+        <div><dt>Temas</dt><dd>Creación de juegos con el marco conceptual de la clase</dd></div>
         <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Enfatizar el uso de juegos y material didáctico como método de aprendizaje en la materia.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="bizagi gestion empresarial erp procesos negocio">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Bizagi</h2>
-      <p class="card-desc">Herramienta profesional para diseñar, modelar y automatizar procesos de negocio mediante diagramas interactivos, facilitando la optimización y gestión eficiente de flujos de trabajo complejos.</p>
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="articulate storyline scorm cursos interactivos quizzes">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Articulate</h2>
+      <p class="card-desc">Suite para crear cursos interactivos y SCORM-compatibles, con plantillas estandarizadas, quizzes y seguimiento de progreso.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Bizagi · Diseño de proyectos · Ejecución y automatización de proyectos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de la gestión empresarial mediante un software que permite explorar distintos conceptos de los negocios.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a Articulate · Introducción a Storyline · Interfaz · Creación de capas · Creación de escenas · Creación de botones</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Crear nuevos métodos de aprendizaje y virtualizar el conocimiento con material interactivo.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="trello tableros proyectos agil">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Trello</h2>
-      <p class="card-desc">Plataforma intuitiva de gestión de proyectos basada en tableros visuales, que permite organizar tareas, colaborar en equipo y mejorar la productividad con un enfoque ágil y flexible.</p>
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="mindmanager mapas conceptuales diagramas de flujo lluvia de ideas">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Mind Manager</h2>
+      <p class="card-desc">Software profesional para crear mapas conceptuales, diagramas de flujo y organizadores gráficos interactivos, ideal para planificación y lluvia de ideas.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Trello · Diseño de tableros interactivos</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a MindManager · Interfaz y creación de mapas conceptuales</dd></div>
         <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar la gestión y organización de proyectos mediante un software didáctico que permita al estudiante interiorizar más su aprendizaje.</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo académico con el uso de herramientas digitales que lo requieran.</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="inteligencia artificial ia prompt etica">
+      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+      <h2 class="card-title">Inteligencia Artificial (IA)</h2>
+      <p class="card-desc">Capacitar al usuario en el buen uso de las distintas inteligencias artificiales y su integración correcta con la educación.</p>
+      <dl class="card-meta">
+        <div><dt>Temas</dt><dd>Introducción a la ingeniería de prompt · Ética en el uso de agentes de IA</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar tareas del día a día que pueden resolverse con IA, promoviendo un uso responsable de estas.</dd></div>
       </dl>
     </article>
 
@@ -234,47 +247,69 @@
       </dl>
     </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="python ciencia de datos numpy pandas matplotlib ia">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">Python</h2>
-      <p class="card-desc">Lenguaje multipropósito dominante en ciencia de datos. Usado para análisis económicos, automatización, inteligencia artificial y procesamiento de datos.</p>
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="odoo erp codigo abierto ventas inventario contabilidad">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">Odoo</h2>
+      <p class="card-desc">ERP de código abierto que permite aprender conceptos clave de gestión empresarial mediante ejercicios prácticos, integrando módulos como ventas, inventario y contabilidad en un solo sistema.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Python · Sintaxis · Librerías · Numpy · Pandas · Matplotlib</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en programación y su relación con distintas metodologías del desarrollo profesional de la carrera.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a ERP · Creación de cuenta · Manejo de la interfaz · Creación de transacción · Procesos de negocios</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="rstudio r estadistica regresiones inferencia">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">RStudio (R)</h2>
-      <p class="card-desc">Entorno para programación en R, especializado en estadística avanzada, modelado predictivo y visualización científica. Código abierto y colaborativo.</p>
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="sap erp finanzas logistica recursos humanos">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">SAP</h2>
+      <p class="card-desc">Solución ERP líder para entender la gestión integral de negocios, explorando módulos especializados (finanzas, logística, RH) debido a su estructura compleja y profesional.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a RStudio · Interfaz y sintaxis · Estadística descriptiva · Probabilidad · Inferencia estadística · Regresiones</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar conceptos como probabilidad y estadística fundamental.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a SAP · Contabilidad financiera · Ventas y Distribución · Gestión de materiales · Planificación de la producción · Costos · Gestión de activos empresariales · Gestión del Capital Humano · Gestión de proyectos · Gestión de Calidad · Gestión de almacenes · Gestión Ambiental</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por módulo</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="stata econometria series temporales encuestas">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">STATA</h2>
-      <p class="card-desc">Entorno estadístico intuitivo especializado en ciencias sociales, con sintaxis simplificada para econometría, series temporales y análisis de encuestas.</p>
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="siigo contable erp facturacion">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">Siigo</h2>
+      <p class="card-desc">Software contable y ERP amigable, ideal para aprender fundamentos de facturación, reporting financiero y flujos de trabajo con una interfaz intuitiva.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a STATA · Interfaz y sintaxis · Regresiones · Evaluación de impacto · Creación y edición de gráficos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar los conceptos vistos en clase.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a Siigo</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="matlab modelado matematico dynare ecuaciones algebra">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">MATLAB</h2>
-      <p class="card-desc">Entorno de programación avanzado para modelado matemático, análisis de datos y desarrollo de algoritmos aplicados a teorías económicas y financieras.</p>
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="world office contable erp pymes">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">World Office</h2>
+      <p class="card-desc">Herramienta contable y ERP para gestionar procesos financieros básicos y avanzados, destacando por su interfaz visual y usos prácticos en pymes.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Matlab · Dynare · Ecuaciones diferenciales · Álgebra lineal · Optimización estática y dinámica</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Mostrar el desarrollo de los conceptos vistos en los componentes cuantitativos y su aplicación a las diversas teorías económicas.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a World Office · Operaciones contables y comerciales · Contabilidad y reportes financieros</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="bizagi gestion empresarial erp procesos negocio">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">Bizagi</h2>
+      <p class="card-desc">Herramienta profesional para diseñar, modelar y automatizar procesos de negocio mediante diagramas interactivos, facilitando la optimización y gestión eficiente de flujos de trabajo complejos.</p>
+      <dl class="card-meta">
+        <div><dt>Temas</dt><dd>Introducción a Bizagi · Diseño de proyectos · Ejecución y automatización de proyectos</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de la gestión empresarial mediante un software que permite explorar distintos conceptos de los negocios.</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="trello tableros proyectos agil">
+      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+      <h2 class="card-title">Trello</h2>
+      <p class="card-desc">Plataforma intuitiva de gestión de proyectos basada en tableros visuales, que permite organizar tareas, colaborar en equipo y mejorar la productividad con un enfoque ágil y flexible.</p>
+      <dl class="card-meta">
+        <div><dt>Temas</dt><dd>Introducción a Trello · Diseño de tableros interactivos</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Complementar la gestión y organización de proyectos mediante un software didáctico que permita al estudiante interiorizar más su aprendizaje.</dd></div>
       </dl>
     </article>
 
@@ -344,122 +379,77 @@
       </dl>
     </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="moodle lms cursos tareas foros evaluaciones">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Moodle</h2>
-      <p class="card-desc">Sistema de gestión de aprendizaje (LMS) líder en educación virtual, usado por la universidad para administrar cursos, tareas, foros y evaluaciones.</p>
+    <article class="course-card" data-area="Econometría y programación" data-search="python ciencia de datos numpy pandas matplotlib ia">
+      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+      <h2 class="card-title">Python</h2>
+      <p class="card-desc">Lenguaje multipropósito dominante en ciencia de datos. Usado para análisis económicos, automatización, inteligencia artificial y procesamiento de datos.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Capacitación profesor · Capacitación estudiantes</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Familiarizarse con la página donde está todo el material académico de las distintas materias y cursos.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a Python · Sintaxis · Librerías · Numpy · Pandas · Matplotlib</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en programación y su relación con distintas metodologías del desarrollo profesional de la carrera.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="zoom videoconferencias clases virtuales webinar">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Zoom</h2>
-      <p class="card-desc">Plataforma líder en videoconferencias, con funciones para clases virtuales, reuniones colaborativas y webinars académicos.</p>
+    <article class="course-card" data-area="Econometría y programación" data-search="rstudio r estadistica regresiones inferencia">
+      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+      <h2 class="card-title">RStudio (R)</h2>
+      <p class="card-desc">Entorno para programación en R, especializado en estadística avanzada, modelado predictivo y visualización científica. Código abierto y colaborativo.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Funcionalidades de Zoom</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Ante cualquier situación, poder virtualizar una clase o cualquier tipo de reunión.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a RStudio · Interfaz y sintaxis · Estadística descriptiva · Probabilidad · Inferencia estadística · Regresiones</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar conceptos como probabilidad y estadística fundamental.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="microsoft teams reuniones canales office 365">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Microsoft Teams</h2>
-      <p class="card-desc">Plataforma integral que facilita el trabajo colaborativo, las reuniones virtuales, la comunicación y la organización de actividades, integrando Excel, OneNote y Planner.</p>
+    <article class="course-card" data-area="Econometría y programación" data-search="stata econometria series temporales encuestas">
+      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+      <h2 class="card-title">STATA</h2>
+      <p class="card-desc">Entorno estadístico intuitivo especializado en ciencias sociales, con sintaxis simplificada para econometría, series temporales y análisis de encuestas.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Microsoft Teams · Organización de equipos y canales · Comunicación efectiva (chat, reuniones y llamadas) · Colaboración en documentos (integración con Office 365)</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilita la comunicación y el trabajo colaborativo en clase y en equipos de trabajo.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a STATA · Interfaz y sintaxis · Regresiones · Evaluación de impacto · Creación y edición de gráficos</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar los conceptos vistos en clase.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="google workspace gmail calendar meet drive documentos">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Google Workspace</h2>
-      <p class="card-desc">Herramienta intuitiva para crear sitios web colaborativos, ideal para portafolios académicos, proyectos grupales o recursos de clase.</p>
+    <article class="course-card" data-area="Econometría y programación" data-search="matlab modelado matematico dynare ecuaciones algebra">
+      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+      <h2 class="card-title">MATLAB</h2>
+      <p class="card-desc">Entorno de programación avanzado para modelado matemático, análisis de datos y desarrollo de algoritmos aplicados a teorías económicas y financieras.</p>
       <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Gmail · Calendar · Keep · Meet · Formularios · Hojas de cálculo · Documentos · Tasks</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar la vida universitaria familiarizándose con todo lo que Google tiene para ofrecer.</dd></div>
+        <div><dt>Temas</dt><dd>Introducción a Matlab · Dynare · Ecuaciones diferenciales · Álgebra lineal · Optimización estática y dinámica</dd></div>
+        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+        <div><dt>Aporte a las asignaturas</dt><dd>Mostrar el desarrollo de los conceptos vistos en los componentes cuantitativos y su aplicación a las diversas teorías económicas.</dd></div>
       </dl>
     </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="h5p moodle contenido interactivo juegos flashcards">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">H5P</h2>
-      <p class="card-desc">Plataforma para desarrollar contenido interactivo en Moodle (videos con preguntas, flashcards, líneas de tiempo) sin necesidad de programación.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Creación de juegos con el marco conceptual de la clase</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Enfatizar el uso de juegos y material didáctico como método de aprendizaje en la materia.</dd></div>
-      </dl>
-    </article>
+    </section>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="articulate storyline scorm cursos interactivos quizzes">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Articulate</h2>
-      <p class="card-desc">Suite para crear cursos interactivos y SCORM-compatibles, con plantillas estandarizadas, quizzes y seguimiento de progreso.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Articulate · Introducción a Storyline · Interfaz · Creación de capas · Creación de escenas · Creación de botones</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Crear nuevos métodos de aprendizaje y virtualizar el conocimiento con material interactivo.</dd></div>
-      </dl>
-    </article>
+    <p class="no-results" id="no-results" hidden>Ningún software coincide con esos filtros. Intenta con otro término o área.</p>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="mindmanager mapas conceptuales diagramas de flujo lluvia de ideas">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Mind Manager</h2>
-      <p class="card-desc">Software profesional para crear mapas conceptuales, diagramas de flujo y organizadores gráficos interactivos, ideal para planificación y lluvia de ideas.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a MindManager · Interfaz y creación de mapas conceptuales</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo académico con el uso de herramientas digitales que lo requieran.</dd></div>
-      </dl>
-    </article>
+  </main>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="inteligencia artificial ia prompt etica">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Inteligencia Artificial (IA)</h2>
-      <p class="card-desc">Capacitar al usuario en el buen uso de las distintas inteligencias artificiales y su integración correcta con la educación.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a la ingeniería de prompt · Ética en el uso de agentes de IA</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar tareas del día a día que pueden resolverse con IA, promoviendo un uso responsable de estas.</dd></div>
-      </dl>
-    </article>
-
-
+  <section class="poster-bottom" aria-label="Contacto y solicitud">
+    <div class="help-card">
+      <p class="kicker">¿Tienes dudas sobre el proceso?</p>
+      <p class="help-text">No dudes en comunicarte al correo: <strong><a href="mailto:uniic_bog@unal.edu.co">uniic_bog@unal.edu.co</a></strong> o al <strong>Tel: 3165000 Ext: 12301</strong> o acércate a la <strong>oficina de la UIFCE - Edificio 310</strong>.</p>
+    </div>
+    <div class="cta-card">
+      <div class="cta-copy">
+        <p class="cta-title">¡Solicítalo aquí!</p>
+        <p class="cta-text">Solicítalo con dos semanas de anticipación.<br>*Máximo se brindan cinco apoyos por materia al semestre.</p>
+      </div>
+      <a class="qr-box" href="https://forms.gle/RLfbg7KAtprvs5PY9" target="_blank" rel="noopener" aria-label="Abrir el formulario de solicitud de Apoyos Académicos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span>Formulario de solicitud</span></a>
+      <div class="cta-robot" aria-hidden="true"><img src="assets/uifcito-cartelera.svg" alt=""></div>
+    </div>
   </section>
 
-  <p class="no-results" id="no-results" hidden>Ningún software coincide con esos filtros. Intenta con otro término o área.</p>
+  <footer class="panel-foot">
+    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
+    <p>Universidad Nacional de Colombia · Unidad de Informática de la Facultad de Ciencias Económicas (UIFCE), sede Bogotá.</p>
+  </footer>
 
-</main>
-
-<footer class="footer-login">
-  <div class="footer-inner">
-    <div>
-      <h3>UIFCE</h3>
-      <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
-    </div>
-    <div>
-      <h3>Explorar</h3>
-      <ul>
-        <li><a href="index.html">Apoyos Académicos</a></li>
-        <li><a href="catalogo.html">Catálogo de software</a></li>
-        <li><a href="rutas.html">Rutas por área</a></li>
-        <li><a href="solicitar.html">Cómo solicitar</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Aviso</h3>
-      <p>¿Ya sabes qué software necesitas? <a href="solicitar.html">Solicita tu Apoyo Académico</a> siguiendo el formulario oficial.</p>
-    </div>
-  </div>
-</footer>
+</div>
 
 <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
 

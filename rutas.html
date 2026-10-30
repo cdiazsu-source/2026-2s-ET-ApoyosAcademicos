@@ -5,104 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rutas por área académica — Apoyos Académicos UIFCE</title>
 <meta name="description" content="Catálogo completo de software para Apoyos Académicos, agrupado por área académica.">
+<meta name="theme-color" content="#00005c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="poster">
 
-<div class="header-zone">
-  <div class="badge-circle">
-    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
-  </div>
-  <header class="header-curve">
-    <div class="header-curve-inner">
-      <p class="header-kicker">Universidad Nacional de Colombia</p>
-      <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+  <header class="poster-top">
+    <div class="top-card">
+      <p class="kicker">Rutas por área académica</p>
+      <p class="top-text">Cinco áreas pensadas para la Facultad de Ciencias Económicas: elige la que mejor encaje con tu asignatura.</p>
+    </div>
+    <a class="logo-tab" href="index.html" aria-label="UiFCE — Apoyos Académicos, ir al inicio">
+      <span class="logo-mark">UiFCE</span>
+      <span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span>
+    </a>
+    <div class="top-card">
+      <p class="kicker">¿Cómo solicitarlo?</p>
+      <ol class="mini-steps">
+        <li><span class="step-chip">1</span><span>Elige la<br>herramienta</span></li>
+        <li><span class="step-chip">2</span><span>Diligencia el<br>formulario</span></li>
+        <li><span class="step-chip">3</span><span>Agenda fecha<br>y espacio</span></li>
+      </ol>
     </div>
   </header>
-</div>
 
-<nav class="site-nav">
-  <div class="wrap site-nav-inner">
-    <a class="brand" href="index.html">Apoyos Académicos</a>
-    <div class="site-nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo de software</a>
-      <a href="rutas.html" aria-current="page">Rutas por área</a>
-      <a href="solicitar.html">Cómo solicitar</a>
-    </div>
-  </div>
-</nav>
+  <nav class="pill-nav" aria-label="Secciones del sitio">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo de software</a>
+    <a href="rutas.html" aria-current="page">Rutas por área</a>
+    <a href="solicitar.html">Cómo solicitar</a>
+  </nav>
 
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <p class="eyebrow">Unidad de Informática · Facultad de Ciencias Económicas · Universidad Nacional de Colombia</p>
-    <h1>Rutas por área académica</h1>
-    <p class="masthead-sub">Todo el catálogo de software para Apoyos Académicos, agrupado en 5 áreas según el uso que se le da en la facultad. Presiona sobre el <a href="catalogo.html">catálogo completo</a> para ver el detalle de temas, sesiones sugeridas y aporte a las asignaturas de cada software.</p>
-  </div>
-</header>
+  <main>
 
-<main class="wrap">
+    <section class="page-head">
+      <p class="kicker">Rutas por área académica</p>
+      <h1>Todo el catálogo, agrupado en 5 áreas</h1>
+      <p>Los 32 softwares de los Apoyos Académicos organizados según el uso que se les da en la facultad. Consulta el <a href="catalogo.html">catálogo completo</a> para ver el detalle de temas, sesiones sugeridas y aporte a las asignaturas de cada software.</p>
+    </section>
 
-  <section class="map-page-tracks" aria-label="Áreas académicas">
-    <div class="track-grid">
-
-      <div class="track" data-area="Gestión y sistemas empresariales">
-        <h3 class="track-name">Gestión y sistemas empresariales <span class="track-count">· 6</span></h3>
-        <p class="track-desc">Software contable, ERP y de procesos para llevar a la práctica los cursos de administración, contabilidad y gestión.</p>
-        <ul>
-          <li>Odoo</li>
-          <li>SAP</li>
-          <li>Siigo</li>
-          <li>World Office</li>
-          <li>Bizagi</li>
-          <li>Trello</li>
-        </ul>
-      </div>
-
-      <div class="track" data-area="Análisis de datos y BI">
-        <h3 class="track-name">Análisis de datos y BI <span class="track-count">· 8</span></h3>
-        <p class="track-desc">Hojas de cálculo, bases de datos y tableros de inteligencia de negocios para trabajar y visualizar información económica.</p>
-        <ul>
-          <li>Excel</li>
-          <li>Google Sheets</li>
-          <li>Access</li>
-          <li>MySQL</li>
-          <li>PostgreSQL</li>
-          <li>Power BI</li>
-          <li>Tableau</li>
-          <li>Looker Studio</li>
-        </ul>
-      </div>
-
-      <div class="track" data-area="Econometría y programación">
-        <h3 class="track-name">Econometría y programación <span class="track-count">· 4</span></h3>
-        <p class="track-desc">Lenguajes y paquetes estadísticos para econometría, modelación matemática y ciencia de datos.</p>
-        <ul>
-          <li>Python</li>
-          <li>RStudio (R)</li>
-          <li>STATA</li>
-          <li>MATLAB</li>
-        </ul>
-      </div>
-
-      <div class="track" data-area="Investigación y escritura académica">
-        <h3 class="track-name">Investigación y escritura académica <span class="track-count">· 6</span></h3>
-        <p class="track-desc">Herramientas para redactar, referenciar y analizar información cualitativa o espacial en trabajos y tesis.</p>
-        <ul>
-          <li>Word</li>
-          <li>LaTeX</li>
-          <li>Zotero</li>
-          <li>Mendeley</li>
-          <li>NVivo</li>
-          <li>QGIS</li>
-        </ul>
-      </div>
+    <section class="track-grid" aria-label="Áreas académicas">
 
       <div class="track" data-area="Docencia y herramientas digitales">
-        <h3 class="track-name">Docencia y herramientas digitales <span class="track-count">· 8</span></h3>
-        <p class="track-desc">Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la IA de forma responsable.</p>
+        <h2 class="track-name">Docencia y herramientas digitales <span class="track-count">· 8</span></h2>
+        <p class="track-desc">Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la <strong>IA</strong> de forma responsable en tu docencia.</p>
         <ul>
           <li>Moodle</li>
           <li>Zoom</li>
@@ -115,32 +65,83 @@
         </ul>
       </div>
 
+      <div class="track" data-area="Análisis de datos y BI">
+        <h2 class="track-name">Análisis de datos y BI <span class="track-count">· 8</span></h2>
+        <p class="track-desc">Hojas de cálculo, bases de datos y tableros de BI para que tus estudiantes trabajen y visualicen información económica.</p>
+        <ul>
+          <li>Excel</li>
+          <li>Google Sheets</li>
+          <li>Access</li>
+          <li>MySQL</li>
+          <li>PostgreSQL</li>
+          <li>Power BI</li>
+          <li>Tableau</li>
+          <li>Looker Studio</li>
+        </ul>
+      </div>
+
+      <div class="track" data-area="Gestión y sistemas empresariales">
+        <h2 class="track-name">Gestión y sistemas empresariales <span class="track-count">· 6</span></h2>
+        <p class="track-desc">Software contable, ERP y de procesos para llevar a la práctica tus clases de administración, contabilidad y gestión.</p>
+        <ul>
+          <li>Odoo</li>
+          <li>SAP</li>
+          <li>Siigo</li>
+          <li>World Office</li>
+          <li>Bizagi</li>
+          <li>Trello</li>
+        </ul>
+      </div>
+
+      <div class="track" data-area="Investigación y escritura académica">
+        <h2 class="track-name">Investigación y escritura académica <span class="track-count">· 6</span></h2>
+        <p class="track-desc">Herramientas para redactar, referenciar y analizar información cualitativa o espacial en tus investigaciones y en las tesis que diriges.</p>
+        <ul>
+          <li>Word</li>
+          <li>LaTeX</li>
+          <li>Zotero</li>
+          <li>Mendeley</li>
+          <li>NVivo</li>
+          <li>QGIS</li>
+        </ul>
+      </div>
+
+      <div class="track" data-area="Econometría y programación">
+        <h2 class="track-name">Econometría y programación <span class="track-count">· 4</span></h2>
+        <p class="track-desc">Lenguajes y paquetes estadísticos para llevar la econometría, la modelación y la ciencia de datos a tus cursos.</p>
+        <ul>
+          <li>Python</li>
+          <li>RStudio (R)</li>
+          <li>STATA</li>
+          <li>MATLAB</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <section class="poster-bottom" aria-label="Contacto y solicitud">
+    <div class="help-card">
+      <p class="kicker">¿Tienes dudas sobre el proceso?</p>
+      <p class="help-text">No dudes en comunicarte al correo: <strong><a href="mailto:uniic_bog@unal.edu.co">uniic_bog@unal.edu.co</a></strong> o al <strong>Tel: 3165000 Ext: 12301</strong> o acércate a la <strong>oficina de la UIFCE - Edificio 310</strong>.</p>
+    </div>
+    <div class="cta-card">
+      <div class="cta-copy">
+        <p class="cta-title">¡Solicítalo aquí!</p>
+        <p class="cta-text">Solicítalo con dos semanas de anticipación.<br>*Máximo se brindan cinco apoyos por materia al semestre.</p>
+      </div>
+      <a class="qr-box" href="https://forms.gle/RLfbg7KAtprvs5PY9" target="_blank" rel="noopener" aria-label="Abrir el formulario de solicitud de Apoyos Académicos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span>Formulario de solicitud</span></a>
+      <div class="cta-robot" aria-hidden="true"><img src="assets/uifcito-cartelera.svg" alt=""></div>
     </div>
   </section>
 
-</main>
+  <footer class="panel-foot">
+    <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
+    <p>Universidad Nacional de Colombia · Unidad de Informática de la Facultad de Ciencias Económicas (UIFCE), sede Bogotá.</p>
+  </footer>
 
-<footer class="footer-login">
-  <div class="footer-inner">
-    <div>
-      <h3>UIFCE</h3>
-      <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
-    </div>
-    <div>
-      <h3>Explorar</h3>
-      <ul>
-        <li><a href="index.html">Apoyos Académicos</a></li>
-        <li><a href="catalogo.html">Catálogo de software</a></li>
-        <li><a href="rutas.html">Rutas por área</a></li>
-        <li><a href="solicitar.html">Cómo solicitar</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Aviso</h3>
-      <p>Puedes solicitar cualquier software independientemente del área. Consulta el <a href="catalogo.html">catálogo completo</a>.</p>
-    </div>
-  </div>
-</footer>
+</div>
 
 <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
 

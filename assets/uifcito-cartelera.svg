@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" preserveAspectRatio="xMidYMin slice">
+  <!-- Uifcito (versión frontal de la cartelera) -->
+  <!-- brazos -->
+  <path d="M52 300 C18 292 10 262 24 236" fill="none" stroke="#2f2f3b" stroke-width="15" stroke-linecap="round"/>
+  <path d="M248 300 C282 292 290 262 276 236" fill="none" stroke="#2f2f3b" stroke-width="15" stroke-linecap="round"/>
+  <!-- cuello -->
+  <rect x="122" y="176" width="56" height="30" fill="#2b2b38"/>
+  <!-- cuerpo -->
+  <rect x="42" y="198" width="216" height="200" rx="12" fill="#f0ebc8" stroke="#2b2b38" stroke-width="3"/>
+  <path d="M42 246 H118 L136 262 H258" fill="none" stroke="#38d3ff" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M42 255 H114 L132 271 H258" fill="none" stroke="#2b2b38" stroke-width="2.5" stroke-linejoin="round"/>
+  <rect x="196" y="214" width="46" height="20" rx="4" fill="#f5c400" stroke="#4a3d00" stroke-width="2.5"/>
+  <!-- cabeza -->
+  <rect x="8" y="8" width="284" height="176" rx="16" fill="#f0ebc8" stroke="#2b2b38" stroke-width="3"/>
+  <rect x="8" y="170" width="284" height="14" rx="7" fill="#cfc9a0" opacity=".7"/>
+  <rect x="24" y="22" width="252" height="140" rx="8" fill="#000"/>
+  <!-- cara -->
+  <ellipse cx="86" cy="88" rx="15" ry="27" fill="#3ed3ff"/>
+  <ellipse cx="214" cy="88" rx="15" ry="27" fill="#3ed3ff"/>
+  <path d="M136 114 Q150 128 164 114" fill="none" stroke="#3ed3ff" stroke-width="6" stroke-linecap="round"/>
+</svg>
