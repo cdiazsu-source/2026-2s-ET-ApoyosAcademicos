@@ -34,7 +34,7 @@
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
   --font-brand: "Ancizar Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-accent: "Ancizar Serif", Georgia, serif;
+  --font-accent: "Ancizar Sans", "Inter", system-ui, sans-serif;
   --gutter: clamp(8px, 1.4vw, 20px);
 }
 
@@ -404,6 +404,25 @@ a { color: var(--yellow); }
 }
 
 .area-card:active { transform: translateY(0) scale(0.99); }
+
+/* Flecha ligera: indica que la tarjeta se despliega (sin texto) */
+.area-chevron {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  width: 11px;
+  height: 11px;
+  border-right: 2.5px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1px;
+  transform: rotate(45deg);
+  transition: transform 0.2s var(--ease-out-strong), border-color 0.2s ease;
+}
+
+.area-card:hover .area-chevron {
+  border-color: var(--yellow);
+  transform: rotate(45deg) translate(2px, 2px);
+}
 
 .area-card h2 {
   font-size: clamp(1.3rem, 1.7vw, 1.6rem);
@@ -1344,6 +1363,8 @@ a { color: var(--yellow); }
   .area-grid { gap: 12px; }
   .area-card { flex-direction: row; align-items: center; justify-content: flex-start; gap: 18px; min-height: 0; padding: 18px 20px; }
   .area-icon { flex: 0 0 auto; width: 52px; height: 52px; }
+  .area-chevron { top: 50%; right: 22px; margin-top: -8px; }
+  .area-card h2 { padding-right: 22px; }
 }
 
 /* ============================================================
