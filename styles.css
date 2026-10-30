@@ -329,7 +329,6 @@ a { color: var(--yellow); }
 .area-card,
 .track,
 .step,
-.stat,
 .info-card,
 .page-head {
   position: relative;
@@ -477,46 +476,6 @@ a { color: var(--yellow); }
   line-height: 1.15;
   color: var(--text-soft);
   text-wrap: balance;
-}
-
-/* ============================================================
-   Cifras
-   ============================================================ */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(14px, 1.6vw, 22px);
-  margin-top: clamp(22px, 2.4vw, 34px);
-}
-
-.stat:nth-child(1) { --accent: var(--c-docencia); }
-.stat:nth-child(2) { --accent: var(--c-analisis); }
-.stat:nth-child(3) { --accent: var(--c-gestion); }
-.stat:nth-child(4) { --accent: var(--c-investigacion); }
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 16px 22px 18px;
-  border-top-width: 6px;
-}
-
-.stat-value {
-  font-variant-numeric: tabular-nums;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--yellow);
-}
-
-.stat-label {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 1.1rem;
-  line-height: 1.15;
-  color: var(--text-soft);
 }
 
 /* ============================================================
@@ -1357,7 +1316,6 @@ a { color: var(--yellow); }
   .logo-tab { order: -1; justify-self: center; }
   .top-card { margin-top: 0; }
   .poster-bottom { grid-template-columns: 1fr; gap: 64px; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -1401,7 +1359,7 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
 .logo-sub span:last-child  { font-size: clamp(1.15rem, 2.15vw, 2.05rem); }
 
 /* Textos de apoyo de la cartelera: cursiva en la misma familia */
-.kicker, .top-text, .mini-steps li, .stat-label, .help-text,
+.kicker, .top-text, .mini-steps li, .help-text,
 .cta-title, .cta-text, .note, .result-count, .card-meta dt, .group-count, .track-count {
   font-family: var(--font-accent);
   font-style: italic;
@@ -1412,7 +1370,6 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
 .top-text { font-weight: 400; font-size: clamp(0.95rem, 1.1vw, 1.1rem); line-height: 1.35; }
 .top-text strong { font-weight: 700; }
 .mini-steps li { font-weight: 500; font-size: clamp(0.82rem, 0.95vw, 0.95rem); line-height: 1.15; }
-.stat-label { font-weight: 500; font-size: 0.9rem; }
 .help-text { font-weight: 400; font-size: clamp(0.9rem, 1.05vw, 1.02rem); line-height: 1.4; }
 .help-text strong { font-weight: 700; font-style: italic; }
 .cta-title { font-weight: 800; font-size: clamp(1.6rem, 2.4vw, 2.3rem); }
