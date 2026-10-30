@@ -47,8 +47,12 @@
       if (visible) visibleCount++;
     });
 
+    // Sin filtros las categorías quedan contraídas; al filtrar se abren las que tienen resultados
+    var filtering = !!(query || area);
     groups.forEach(function (group) {
-      group.hidden = !group.querySelector('.course-card:not([hidden])');
+      var hasResults = !!group.querySelector('.course-card:not([hidden])');
+      group.hidden = !hasResults;
+      group.open = filtering && hasResults;
     });
 
     resultCount.textContent ='Mostrando ' + visibleCount + ' de ' + totalCourses + ' softwares';

@@ -49,14 +49,8 @@
       <p>Presiona sobre el software que te interese para conocer los temas que cubre, las sesiones sugeridas y su aporte a las asignaturas. Filtra por área académica o busca por nombre.</p>
     </section>
 
-    <section class="stats" aria-label="Resumen del catálogo">
-      <div class="stat"><span class="stat-value">32</span><span class="stat-label">Softwares</span></div>
-      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Áreas académicas</span></div>
-      <div class="stat"><span class="stat-value">1–2</span><span class="stat-label">Sesiones sugeridas por tema</span></div>
-      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Apoyos máx. por materia</span></div>
-    </section>
 
-    <section class="toolbar" aria-label="Filtros" style="margin-top:clamp(22px,2.4vw,34px)">
+    <section class="toolbar" aria-label="Filtros">
       <input type="search" id="search" placeholder="Buscar por nombre de software…" aria-label="Buscar software">
       <select id="filter-area" aria-label="Filtrar por área académica">
         <option value="">Todas las áreas</option>
@@ -72,8 +66,11 @@
 
     <div id="course-grid" aria-label="Softwares disponibles">
 
-      <section class="course-group" data-area="Docencia y herramientas digitales">
-        <h2 class="group-title">Docencia y herramientas digitales <span class="group-count">· 8</span></h2>
+      <details class="course-group" data-area="Docencia y herramientas digitales">
+        <summary class="group-summary">
+          <h2 class="group-title">Docencia y herramientas digitales <span class="group-count">· 8</span></h2>
+          <span class="group-chevron" aria-hidden="true"></span>
+        </summary>
         <div class="tile-grid">
         <article class="course-card" data-area="Docencia y herramientas digitales" data-search="moodle lms cursos tareas foros evaluaciones">
           <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Moodle">
@@ -307,10 +304,13 @@
           </dialog>
         </article>
         </div>
-      </section>
+      </details>
 
-      <section class="course-group" data-area="Análisis de datos y BI">
-        <h2 class="group-title">Análisis de datos y BI <span class="group-count">· 8</span></h2>
+      <details class="course-group" data-area="Análisis de datos y BI">
+        <summary class="group-summary">
+          <h2 class="group-title">Análisis de datos y BI <span class="group-count">· 8</span></h2>
+          <span class="group-chevron" aria-hidden="true"></span>
+        </summary>
         <div class="tile-grid">
         <article class="course-card" data-area="Análisis de datos y BI" data-search="excel tablas dinamicas formulas macros power query">
           <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Excel">
@@ -544,10 +544,13 @@
           </dialog>
         </article>
         </div>
-      </section>
+      </details>
 
-      <section class="course-group" data-area="Gestión y sistemas empresariales">
-        <h2 class="group-title">Gestión y sistemas empresariales <span class="group-count">· 6</span></h2>
+      <details class="course-group" data-area="Gestión y sistemas empresariales">
+        <summary class="group-summary">
+          <h2 class="group-title">Gestión y sistemas empresariales <span class="group-count">· 6</span></h2>
+          <span class="group-chevron" aria-hidden="true"></span>
+        </summary>
         <div class="tile-grid">
         <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="odoo erp codigo abierto ventas inventario contabilidad">
           <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Odoo">
@@ -723,10 +726,13 @@
           </dialog>
         </article>
         </div>
-      </section>
+      </details>
 
-      <section class="course-group" data-area="Investigación y escritura académica">
-        <h2 class="group-title">Investigación y escritura académica <span class="group-count">· 6</span></h2>
+      <details class="course-group" data-area="Investigación y escritura académica">
+        <summary class="group-summary">
+          <h2 class="group-title">Investigación y escritura académica <span class="group-count">· 6</span></h2>
+          <span class="group-chevron" aria-hidden="true"></span>
+        </summary>
         <div class="tile-grid">
         <article class="course-card" data-area="Investigación y escritura académica" data-search="word documentos academicos apa referencias combinar correspondencia">
           <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Word">
@@ -902,10 +908,13 @@
           </dialog>
         </article>
         </div>
-      </section>
+      </details>
 
-      <section class="course-group" data-area="Econometría y programación">
-        <h2 class="group-title">Econometría y programación <span class="group-count">· 4</span></h2>
+      <details class="course-group" data-area="Econometría y programación">
+        <summary class="group-summary">
+          <h2 class="group-title">Econometría y programación <span class="group-count">· 4</span></h2>
+          <span class="group-chevron" aria-hidden="true"></span>
+        </summary>
         <div class="tile-grid">
         <article class="course-card" data-area="Econometría y programación" data-search="python ciencia de datos numpy pandas matplotlib ia">
           <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Python">
@@ -1023,7 +1032,7 @@
           </dialog>
         </article>
         </div>
-      </section>
+      </details>
 
     </div>
 
