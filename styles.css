@@ -165,7 +165,8 @@ a { color: var(--yellow); }
   text-decoration: none;
 }
 
-/* La pestaña alterna entre el título y el logo oficial de la UIFCE */
+/* La pestaña alterna entre el título y el logo animado (GIF) de la Unidad de Informática; el ciclo
+   de 14 s debe coincidir con CYCLE en logo-tab.js */
 .tab-face {
   grid-area: 1 / 1;
   display: flex;
@@ -173,32 +174,32 @@ a { color: var(--yellow); }
   gap: clamp(8px, 1vw, 14px);
 }
 
-.tab-title { animation: tab-title 12s ease-in-out infinite; }
+.tab-title { animation: tab-title 14s ease-in-out infinite; }
 
 .tab-official {
   position: relative;
   opacity: 0;
-  animation: tab-official 12s ease-in-out infinite;
+  animation: tab-official 14s ease-in-out infinite;
 }
 
-.tab-official::before {
-  content: "";
+.tab-official img {
   position: absolute;
-  inset: calc(-1 * clamp(6px, 0.9vw, 14px)) -8px calc(-1 * clamp(8px, 1vw, 16px));
-  background: var(--logo);
-  -webkit-mask: url("assets/logo-uifce.png") center / contain no-repeat;
-  mask: url("assets/logo-uifce.png") center / contain no-repeat;
+  top: calc(-1 * clamp(6px, 0.9vw, 14px));
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + clamp(6px, 0.9vw, 14px) + clamp(8px, 1vw, 16px));
+  object-fit: contain;
 }
 
 @keyframes tab-title {
-  0%, 42% { opacity: 1; }
-  50%, 92% { opacity: 0; }
+  0%, 40% { opacity: 1; }
+  47%, 90% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 @keyframes tab-official {
-  0%, 42% { opacity: 0; }
-  50%, 92% { opacity: 1; }
+  0%, 40% { opacity: 0; }
+  47%, 90% { opacity: 1; }
   100% { opacity: 0; }
 }
 

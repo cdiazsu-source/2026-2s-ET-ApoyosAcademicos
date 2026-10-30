@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo didáctico UiFCE — vista previa</title>
+<meta name="robots" content="noindex">
+<style>
+  body { margin: 0; padding: 28px 20px 60px; background: #eef0f7; font-family: system-ui, sans-serif; color: #222; }
+  h1 { font-size: 1.15rem; margin: 0 0 6px; }
+  p.n { margin: 0 0 22px; color: #555; font-size: 0.9rem; }
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); max-width: 1180px; }
+  .caja { display: grid; place-items: center; padding: 26px; border-radius: 22px; }
+  .caja img { width: min(100%, 520px); height: auto; display: block; }
+  .azul { background: #00005c; }
+  .blanca { background: #fff; }
+  .gris { background: #dfe3ee; }
+  .amarilla { background: #f5ec00; }
+  .pequenos { display: flex; gap: 28px; align-items: flex-end; flex-wrap: wrap; }
+  .pequenos img { height: auto; }
+  small { display: block; margin: 8px 4px 0; color: #666; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<h1>Logo didáctico — «Unidad de informática de la Facultad de Ciencias Económicas»</h1>
+<p class="n">Las iniciales U · i · F · C · E (resaltadas en la frase) construyen el UiFCE. La versión animada las hace volar hasta su lugar.</p>
+<div class="grid">
+  <div><div class="caja blanca"><img src="logo-didactico-negro.gif" alt="Logo didáctico animado, letras negras, sin fondo"></div><small>GIF animado, letras negras y sin fondo (sobre blanco)</small></div>
+  <div><div class="caja gris"><img src="logo-didactico-negro.gif" alt=""></div><small>El mismo GIF sobre gris claro</small></div>
+  <div><div class="caja amarilla"><img src="logo-didactico-negro.gif" alt=""></div><small>El mismo GIF sobre amarillo</small></div>
+  <div><div class="caja azul"><img src="logo-didactico-animado-fondo-azul.svg" alt="Logo didáctico animado sobre azul"></div><small>Animado, sobre azul noche (se repite cada 11 s)</small></div>
+  <div><div class="caja azul"><img src="logo-didactico-fondo-azul.svg" alt="Logo didáctico sobre azul"></div><small>Estático, sobre azul noche</small></div>
+  <div><div class="caja blanca"><img src="logo-didactico-fondo-claro.svg" alt="Logo didáctico sobre blanco"></div><small>Estático, sobre fondo claro</small></div>
+  <div><div class="caja azul pequenos">
+    <img src="logo-didactico-fondo-azul.svg" style="width:300px" alt="">
+    <img src="logo-didactico-fondo-azul.svg" style="width:200px" alt="">
+    <img src="logo-didactico-fondo-azul.svg" style="width:120px" alt="">
+  </div><small>Prueba de reducción: 300, 200 y 120 px de ancho</small></div>
+</div>
+</body>
+</html>
