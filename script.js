@@ -6,7 +6,21 @@
   var cards = Array.prototype.slice.call(document.querySelectorAll('.course-card'));
   var resultCount = document.getElementById('result-count');
   var noResults = document.getElementById('no-results');
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.course-group'));
   var totalCourses = cards.length;
+
+  // Al presionar una ficha se abre el detalle del software
+  cards.forEach(function (card) {
+    var tile = card.querySelector('.sw-tile');
+    var dialog = card.querySelector('.sw-dialog');
+    if (!tile || !dialog || typeof dialog.showModal !== 'function') return;
+
+    tile.addEventListener('click', function () { dialog.showModal(); });
+    card.querySelector('.dlg-close').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  });
 
   if (!searchInput || !areaSelect) return;
 
@@ -33,7 +47,11 @@
       if (visible) visibleCount++;
     });
 
-    resultCount.textContent = 'Mostrando ' + visibleCount + ' de ' + totalCourses + ' softwares';
+    groups.forEach(function (group) {
+      group.hidden = !group.querySelector('.course-card:not([hidden])');
+    });
+
+    resultCount.textContent ='Mostrando ' + visibleCount + ' de ' + totalCourses + ' softwares';
     noResults.hidden = visibleCount !== 0;
   }
 

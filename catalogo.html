@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#00005c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..900;1,100..900&family=Ancizar+Serif:ital,wght@1,300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,8 +20,8 @@
       <p class="top-text">32 herramientas para llevar a tu clase. Filtra por área o busca por nombre.</p>
     </div>
     <a class="logo-tab" href="index.html" aria-label="UiFCE — Apoyos Académicos, ir al inicio">
-      <span class="logo-mark">UiFCE</span>
-      <span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span>
+      <span class="tab-face tab-title"><span class="logo-mark">UiFCE</span><span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span></span>
+      <span class="tab-face tab-official" role="img" aria-label="Logo oficial de la UIFCE: Unidad de Informática de la Facultad de Ciencias Económicas"></span>
     </a>
     <div class="top-card">
       <p class="kicker">¿Cómo solicitarlo?</p>
@@ -29,6 +29,7 @@
         <li><span class="step-chip">1</span><span>Elige la<br>herramienta</span></li>
         <li><span class="step-chip">2</span><span>Diligencia el<br>formulario</span></li>
         <li><span class="step-chip">3</span><span>Agenda fecha<br>y espacio</span></li>
+        <li><span class="step-chip">4</span><span>Espera la comunicación<br>de la UIFCE</span></li>
       </ol>
     </div>
   </header>
@@ -45,7 +46,7 @@
     <section class="page-head">
       <p class="kicker">Catálogo de software</p>
       <h1>Softwares para Apoyos Académicos</h1>
-      <p>Conoce los temas que cubre cada software, las sesiones sugeridas y su aporte a las asignaturas. Filtra por área académica o busca por nombre.</p>
+      <p>Presiona sobre el software que te interese para conocer los temas que cubre, las sesiones sugeridas y su aporte a las asignaturas. Filtra por área académica o busca por nombre.</p>
     </section>
 
     <section class="stats" aria-label="Resumen del catálogo">
@@ -69,361 +70,834 @@
 
     <p class="result-count" id="result-count" role="status"></p>
 
-    <section class="course-grid" id="course-grid" aria-label="Softwares disponibles">
+    <div id="course-grid" aria-label="Softwares disponibles">
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="moodle lms cursos tareas foros evaluaciones">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Moodle</h2>
-      <p class="card-desc">Sistema de gestión de aprendizaje (LMS) líder en educación virtual, usado por la universidad para administrar cursos, tareas, foros y evaluaciones.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Capacitación profesor · Capacitación estudiantes</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Familiarizarse con la página donde está todo el material académico de las distintas materias y cursos.</dd></div>
-      </dl>
-    </article>
+      <section class="course-group" data-area="Docencia y herramientas digitales">
+        <h2 class="group-title">Docencia y herramientas digitales <span class="group-count">· 8</span></h2>
+        <div class="tile-grid">
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="moodle lms cursos tareas foros evaluaciones">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Moodle">
+            <span class="sw-logo"><img src="assets/logos/moodle.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Moodle</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-moodle">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/moodle.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-moodle">Moodle</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Sistema de gestión de aprendizaje (LMS) líder en educación virtual, usado por la universidad para administrar cursos, tareas, foros y evaluaciones.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Capacitación profesor · Capacitación estudiantes</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Familiarizarse con la página donde está todo el material académico de las distintas materias y cursos.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="zoom videoconferencias clases virtuales webinar">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Zoom</h2>
-      <p class="card-desc">Plataforma líder en videoconferencias, con funciones para clases virtuales, reuniones colaborativas y webinars académicos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Funcionalidades de Zoom</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Ante cualquier situación, poder virtualizar una clase o cualquier tipo de reunión.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="zoom videoconferencias clases virtuales webinar">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Zoom">
+            <span class="sw-logo"><img src="assets/logos/zoom.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Zoom</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-zoom">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/zoom.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-zoom">Zoom</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma líder en videoconferencias, con funciones para clases virtuales, reuniones colaborativas y webinars académicos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Funcionalidades de Zoom</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Ante cualquier situación, poder virtualizar una clase o cualquier tipo de reunión.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="microsoft teams reuniones canales office 365">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Microsoft Teams</h2>
-      <p class="card-desc">Plataforma integral que facilita el trabajo colaborativo, las reuniones virtuales, la comunicación y la organización de actividades, integrando Excel, OneNote y Planner.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Microsoft Teams · Organización de equipos y canales · Comunicación efectiva (chat, reuniones y llamadas) · Colaboración en documentos (integración con Office 365)</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilita la comunicación y el trabajo colaborativo en clase y en equipos de trabajo.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="microsoft teams reuniones canales office 365">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Microsoft Teams">
+            <span class="sw-logo"><img src="assets/logos/teams.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Microsoft Teams</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-microsoft-teams">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/teams.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-microsoft-teams">Microsoft Teams</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma integral que facilita el trabajo colaborativo, las reuniones virtuales, la comunicación y la organización de actividades, integrando Excel, OneNote y Planner.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Microsoft Teams · Organización de equipos y canales · Comunicación efectiva (chat, reuniones y llamadas) · Colaboración en documentos (integración con Office 365)</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilita la comunicación y el trabajo colaborativo en clase y en equipos de trabajo.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="google workspace gmail calendar meet drive documentos">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Google Workspace</h2>
-      <p class="card-desc">Herramienta intuitiva para crear sitios web colaborativos, ideal para portafolios académicos, proyectos grupales o recursos de clase.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Gmail · Calendar · Keep · Meet · Formularios · Hojas de cálculo · Documentos · Tasks</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar la vida universitaria familiarizándose con todo lo que Google tiene para ofrecer.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="google workspace gmail calendar meet drive documentos">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Google Workspace">
+            <span class="sw-logo"><img src="assets/logos/gworkspace.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Google Workspace</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-google-workspace">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/gworkspace.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-google-workspace">Google Workspace</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta intuitiva para crear sitios web colaborativos, ideal para portafolios académicos, proyectos grupales o recursos de clase.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Gmail · Calendar · Keep · Meet · Formularios · Hojas de cálculo · Documentos · Tasks</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilitar la vida universitaria familiarizándose con todo lo que Google tiene para ofrecer.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="h5p moodle contenido interactivo juegos flashcards">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">H5P</h2>
-      <p class="card-desc">Plataforma para desarrollar contenido interactivo en Moodle (videos con preguntas, flashcards, líneas de tiempo) sin necesidad de programación.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Creación de juegos con el marco conceptual de la clase</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Enfatizar el uso de juegos y material didáctico como método de aprendizaje en la materia.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="h5p moodle contenido interactivo juegos flashcards">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de H5P">
+            <span class="sw-logo"><img src="assets/logos/h5p.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">H5P</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-h5p">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/h5p.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-h5p">H5P</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma para desarrollar contenido interactivo en Moodle (videos con preguntas, flashcards, líneas de tiempo) sin necesidad de programación.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Creación de juegos con el marco conceptual de la clase</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Enfatizar el uso de juegos y material didáctico como método de aprendizaje en la materia.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="articulate storyline scorm cursos interactivos quizzes">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Articulate</h2>
-      <p class="card-desc">Suite para crear cursos interactivos y SCORM-compatibles, con plantillas estandarizadas, quizzes y seguimiento de progreso.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Articulate · Introducción a Storyline · Interfaz · Creación de capas · Creación de escenas · Creación de botones</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Crear nuevos métodos de aprendizaje y virtualizar el conocimiento con material interactivo.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="articulate storyline scorm cursos interactivos quizzes">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Articulate">
+            <span class="sw-logo"><img src="assets/logos/articulate.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Articulate</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-articulate">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/articulate.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-articulate">Articulate</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Suite para crear cursos interactivos y SCORM-compatibles, con plantillas estandarizadas, quizzes y seguimiento de progreso.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Articulate · Introducción a Storyline · Interfaz · Creación de capas · Creación de escenas · Creación de botones</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Crear nuevos métodos de aprendizaje y virtualizar el conocimiento con material interactivo.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="mindmanager mapas conceptuales diagramas de flujo lluvia de ideas">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Mind Manager</h2>
-      <p class="card-desc">Software profesional para crear mapas conceptuales, diagramas de flujo y organizadores gráficos interactivos, ideal para planificación y lluvia de ideas.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a MindManager · Interfaz y creación de mapas conceptuales</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo académico con el uso de herramientas digitales que lo requieran.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="mindmanager mapas conceptuales diagramas de flujo lluvia de ideas">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Mind Manager">
+            <span class="sw-logo"><img src="assets/logos/mind-manager.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Mind Manager</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-mind-manager">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/mind-manager.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-mind-manager">Mind Manager</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Software profesional para crear mapas conceptuales, diagramas de flujo y organizadores gráficos interactivos, ideal para planificación y lluvia de ideas.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a MindManager · Interfaz y creación de mapas conceptuales</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo académico con el uso de herramientas digitales que lo requieran.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Docencia y herramientas digitales" data-search="inteligencia artificial ia prompt etica">
-      <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
-      <h2 class="card-title">Inteligencia Artificial (IA)</h2>
-      <p class="card-desc">Capacitar al usuario en el buen uso de las distintas inteligencias artificiales y su integración correcta con la educación.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a la ingeniería de prompt · Ética en el uso de agentes de IA</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar tareas del día a día que pueden resolverse con IA, promoviendo un uso responsable de estas.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Docencia y herramientas digitales" data-search="inteligencia artificial ia prompt etica">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Inteligencia Artificial (IA)">
+            <span class="sw-logo"><img src="assets/logos/ia.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Inteligencia Artificial (IA)</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-inteligencia-artificial-ia">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/ia.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Docencia y herramientas digitales</span></p>
+                <h2 class="card-title" id="sw-inteligencia-artificial-ia">Inteligencia Artificial (IA)</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Capacitar al usuario en el buen uso de las distintas inteligencias artificiales y su integración correcta con la educación.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a la ingeniería de prompt · Ética en el uso de agentes de IA</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilitar tareas del día a día que pueden resolverse con IA, promoviendo un uso responsable de estas.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
+        </div>
+      </section>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="excel tablas dinamicas formulas macros power query">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Excel</h2>
-      <p class="card-desc">Herramienta versátil para dominar desde funciones básicas (tablas dinámicas, fórmulas, gráficos dinámicos) hasta automatización avanzada (Macros, Power Query) en el análisis de datos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Excel · Análisis de datos · Fórmulas · Gráficos y tablas dinámicas · Power Query y Power Pivot · Macros</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>El uso de una herramienta práctica para aplicar los conceptos de las clases en cualquier contexto.</dd></div>
-      </dl>
-    </article>
+      <section class="course-group" data-area="Análisis de datos y BI">
+        <h2 class="group-title">Análisis de datos y BI <span class="group-count">· 8</span></h2>
+        <div class="tile-grid">
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="excel tablas dinamicas formulas macros power query">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Excel">
+            <span class="sw-logo"><img src="assets/logos/excel.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Excel</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-excel">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/excel.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-excel">Excel</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta versátil para dominar desde funciones básicas (tablas dinámicas, fórmulas, gráficos dinámicos) hasta automatización avanzada (Macros, Power Query) en el análisis de datos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Excel · Análisis de datos · Fórmulas · Gráficos y tablas dinámicas · Power Query y Power Pivot · Macros</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>El uso de una herramienta práctica para aplicar los conceptos de las clases en cualquier contexto.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="google sheets hojas de calculo apps script workspace">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Google Sheets</h2>
-      <p class="card-desc">Herramienta potente y colaborativa para el análisis de datos. Permite desarrollar desde funciones y gráficos básicos hasta procesos avanzados con automatización mediante complementos, Apps Script e integración con Google Workspace.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Google Sheets · Análisis de datos con funciones y fórmulas · Gráficos · Automatización con Google Apps Script · Integración con Google Workspace</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>El uso de una herramienta práctica para aplicar los conceptos de las clases en cualquier contexto.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="google sheets hojas de calculo apps script workspace">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Google Sheets">
+            <span class="sw-logo"><img src="assets/logos/google-sheets.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Google Sheets</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-google-sheets">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/google-sheets.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-google-sheets">Google Sheets</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta potente y colaborativa para el análisis de datos. Permite desarrollar desde funciones y gráficos básicos hasta procesos avanzados con automatización mediante complementos, Apps Script e integración con Google Workspace.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Google Sheets · Análisis de datos con funciones y fórmulas · Gráficos · Automatización con Google Apps Script · Integración con Google Workspace</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>El uso de una herramienta práctica para aplicar los conceptos de las clases en cualquier contexto.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="access bases de datos relacionales consultas informes macros">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Access</h2>
-      <p class="card-desc">Sistema de bases de datos relacionales (SQL) enfocado en el manejo, extracción y transformación de datos (ETL) para análisis empresarial.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Access · Consultas · Informes · Macros</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="access bases de datos relacionales consultas informes macros">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Access">
+            <span class="sw-logo"><img src="assets/logos/access.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Access</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-access">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/access.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-access">Access</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Sistema de bases de datos relacionales (SQL) enfocado en el manejo, extracción y transformación de datos (ETL) para análisis empresarial.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Access · Consultas · Informes · Macros</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="mysql base de datos relacional sql">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">MySQL</h2>
-      <p class="card-desc">Sistema de gestión de bases de datos relacionales (RDBMS) open-source, ideal para aplicaciones web y transaccionales con sintaxis SQL estándar.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a MySQL · Bases de datos relacionales · Consultas · Sintaxis del lenguaje SQL</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información y creación de conocimiento.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="mysql base de datos relacional sql">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de MySQL">
+            <span class="sw-logo"><img src="assets/logos/mysql.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">MySQL</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-mysql">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/mysql.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-mysql">MySQL</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Sistema de gestión de bases de datos relacionales (RDBMS) open-source, ideal para aplicaciones web y transaccionales con sintaxis SQL estándar.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a MySQL · Bases de datos relacionales · Consultas · Sintaxis del lenguaje SQL</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información y creación de conocimiento.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="postgresql rdbms json consultas complejas">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">PostgreSQL</h2>
-      <p class="card-desc">RDBMS avanzado con capacidades escalables para grandes volúmenes de datos. Soporta JSON, consultas complejas y es extensible.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a PostgreSQL · Bases de datos relacionales · Consultas complejas · Sintaxis de SQL · Derivados de SQL</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información y creación de conocimiento.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="postgresql rdbms json consultas complejas">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de PostgreSQL">
+            <span class="sw-logo"><img src="assets/logos/postgresql.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">PostgreSQL</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-postgresql">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/postgresql.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-postgresql">PostgreSQL</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">RDBMS avanzado con capacidades escalables para grandes volúmenes de datos. Soporta JSON, consultas complejas y es extensible.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a PostgreSQL · Bases de datos relacionales · Consultas complejas · Sintaxis de SQL · Derivados de SQL</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de bases de datos, para un manejo más óptimo de la información y creación de conocimiento.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="power bi dashboards dax microsoft">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Power BI</h2>
-      <p class="card-desc">Plataforma de Microsoft para visualización de datos interactiva, con capacidades de transformación de datos y lenguaje DAX para análisis avanzado.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Power BI · Diseño de dashboards · Manejo de DAX</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de datos y enseñar uno de los programas más utilizados en el mundo laboral.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="power bi dashboards dax microsoft">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Power BI">
+            <span class="sw-logo"><img src="assets/logos/powerbi.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Power BI</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-power-bi">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/powerbi.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-power-bi">Power BI</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma de Microsoft para visualización de datos interactiva, con capacidades de transformación de datos y lenguaje DAX para análisis avanzado.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Power BI · Diseño de dashboards · Manejo de DAX</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades de los estudiantes en el manejo de datos y enseñar uno de los programas más utilizados en el mundo laboral.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="tableau dashboards storytelling bi">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Tableau</h2>
-      <p class="card-desc">Herramienta líder en BI para crear dashboards intuitivos, enfocada en análisis empresarial con arrastrar-y-soltar. Ideal para storytelling con datos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Tableau · Diseño de dashboards · Análisis visual y diseño · Tableau con SQL y bases de datos relacionales</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en el manejo de datos, para la toma de decisiones rápidas y certeras con business intelligence.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="tableau dashboards storytelling bi">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Tableau">
+            <span class="sw-logo"><img src="assets/logos/tableau.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Tableau</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-tableau">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/tableau.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-tableau">Tableau</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta líder en BI para crear dashboards intuitivos, enfocada en análisis empresarial con arrastrar-y-soltar. Ideal para storytelling con datos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Tableau · Diseño de dashboards · Análisis visual y diseño · Tableau con SQL y bases de datos relacionales</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en el manejo de datos, para la toma de decisiones rápidas y certeras con business intelligence.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Análisis de datos y BI" data-search="looker studio dashboards bi nube">
-      <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
-      <h2 class="card-title">Looker Studio</h2>
-      <p class="card-desc">Solución de Business Intelligence en la nube para exploración colaborativa de datos, con modelado centralizado y énfasis en escalabilidad empresarial.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Looker Studio · Diseño de dashboards · Trabajo colaborativo</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en el manejo de datos y el trabajo colaborativo, para la toma de decisiones rápidas y certeras con business intelligence.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Análisis de datos y BI" data-search="looker studio dashboards bi nube">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Looker Studio">
+            <span class="sw-logo"><img src="assets/logos/looker.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Looker Studio</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-looker-studio">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/looker.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Análisis de datos y BI</span></p>
+                <h2 class="card-title" id="sw-looker-studio">Looker Studio</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Solución de Business Intelligence en la nube para exploración colaborativa de datos, con modelado centralizado y énfasis en escalabilidad empresarial.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Looker Studio · Diseño de dashboards · Trabajo colaborativo</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en el manejo de datos y el trabajo colaborativo, para la toma de decisiones rápidas y certeras con business intelligence.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
+        </div>
+      </section>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="odoo erp codigo abierto ventas inventario contabilidad">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Odoo</h2>
-      <p class="card-desc">ERP de código abierto que permite aprender conceptos clave de gestión empresarial mediante ejercicios prácticos, integrando módulos como ventas, inventario y contabilidad en un solo sistema.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a ERP · Creación de cuenta · Manejo de la interfaz · Creación de transacción · Procesos de negocios</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
-      </dl>
-    </article>
+      <section class="course-group" data-area="Gestión y sistemas empresariales">
+        <h2 class="group-title">Gestión y sistemas empresariales <span class="group-count">· 6</span></h2>
+        <div class="tile-grid">
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="odoo erp codigo abierto ventas inventario contabilidad">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Odoo">
+            <span class="sw-logo"><img src="assets/logos/odoo.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Odoo</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-odoo">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/odoo.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-odoo">Odoo</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">ERP de código abierto que permite aprender conceptos clave de gestión empresarial mediante ejercicios prácticos, integrando módulos como ventas, inventario y contabilidad en un solo sistema.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a ERP · Creación de cuenta · Manejo de la interfaz · Creación de transacción · Procesos de negocios</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="sap erp finanzas logistica recursos humanos">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">SAP</h2>
-      <p class="card-desc">Solución ERP líder para entender la gestión integral de negocios, explorando módulos especializados (finanzas, logística, RH) debido a su estructura compleja y profesional.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a SAP · Contabilidad financiera · Ventas y Distribución · Gestión de materiales · Planificación de la producción · Costos · Gestión de activos empresariales · Gestión del Capital Humano · Gestión de proyectos · Gestión de Calidad · Gestión de almacenes · Gestión Ambiental</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por módulo</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="sap erp finanzas logistica recursos humanos">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de SAP">
+            <span class="sw-logo"><img src="assets/logos/sap.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">SAP</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-sap">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/sap.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-sap">SAP</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Solución ERP líder para entender la gestión integral de negocios, explorando módulos especializados (finanzas, logística, RH) debido a su estructura compleja y profesional.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a SAP · Contabilidad financiera · Ventas y Distribución · Gestión de materiales · Planificación de la producción · Costos · Gestión de activos empresariales · Gestión del Capital Humano · Gestión de proyectos · Gestión de Calidad · Gestión de almacenes · Gestión Ambiental</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por módulo</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en el manejo de software de gestión de procesos empresariales.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="siigo contable erp facturacion">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Siigo</h2>
-      <p class="card-desc">Software contable y ERP amigable, ideal para aprender fundamentos de facturación, reporting financiero y flujos de trabajo con una interfaz intuitiva.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Siigo</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="siigo contable erp facturacion">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Siigo">
+            <span class="sw-logo"><img src="assets/logos/siigo.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Siigo</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-siigo">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/siigo.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-siigo">Siigo</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Software contable y ERP amigable, ideal para aprender fundamentos de facturación, reporting financiero y flujos de trabajo con una interfaz intuitiva.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Siigo</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="world office contable erp pymes">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">World Office</h2>
-      <p class="card-desc">Herramienta contable y ERP para gestionar procesos financieros básicos y avanzados, destacando por su interfaz visual y usos prácticos en pymes.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a World Office · Operaciones contables y comerciales · Contabilidad y reportes financieros</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="world office contable erp pymes">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de World Office">
+            <span class="sw-logo"><img src="assets/logos/world-office.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">World Office</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-world-office">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/world-office.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-world-office">World Office</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta contable y ERP para gestionar procesos financieros básicos y avanzados, destacando por su interfaz visual y usos prácticos en pymes.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a World Office · Operaciones contables y comerciales · Contabilidad y reportes financieros</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de ERP, preparando al usuario en la gestión de procesos empresariales y generación de certificados contables.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="bizagi gestion empresarial erp procesos negocio">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Bizagi</h2>
-      <p class="card-desc">Herramienta profesional para diseñar, modelar y automatizar procesos de negocio mediante diagramas interactivos, facilitando la optimización y gestión eficiente de flujos de trabajo complejos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Bizagi · Diseño de proyectos · Ejecución y automatización de proyectos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de la gestión empresarial mediante un software que permite explorar distintos conceptos de los negocios.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="bizagi gestion empresarial erp procesos negocio">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Bizagi">
+            <span class="sw-logo"><img src="assets/logos/bizagi.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Bizagi</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-bizagi">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/bizagi.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-bizagi">Bizagi</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta profesional para diseñar, modelar y automatizar procesos de negocio mediante diagramas interactivos, facilitando la optimización y gestión eficiente de flujos de trabajo complejos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Bizagi · Diseño de proyectos · Ejecución y automatización de proyectos</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar los conceptos de la gestión empresarial mediante un software que permite explorar distintos conceptos de los negocios.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="trello tableros proyectos agil">
-      <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
-      <h2 class="card-title">Trello</h2>
-      <p class="card-desc">Plataforma intuitiva de gestión de proyectos basada en tableros visuales, que permite organizar tareas, colaborar en equipo y mejorar la productividad con un enfoque ágil y flexible.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Trello · Diseño de tableros interactivos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Complementar la gestión y organización de proyectos mediante un software didáctico que permita al estudiante interiorizar más su aprendizaje.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Gestión y sistemas empresariales" data-search="trello tableros proyectos agil">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Trello">
+            <span class="sw-logo"><img src="assets/logos/trello.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Trello</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-trello">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/trello.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Gestión y sistemas empresariales</span></p>
+                <h2 class="card-title" id="sw-trello">Trello</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma intuitiva de gestión de proyectos basada en tableros visuales, que permite organizar tareas, colaborar en equipo y mejorar la productividad con un enfoque ágil y flexible.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Trello · Diseño de tableros interactivos</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Complementar la gestión y organización de proyectos mediante un software didáctico que permita al estudiante interiorizar más su aprendizaje.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
+        </div>
+      </section>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="word documentos academicos apa referencias combinar correspondencia">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">Word</h2>
-      <p class="card-desc">Herramienta esencial para redacción y formato de documentos académicos, con funciones avanzadas de estilos, referencias y colaboración en tiempo real.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Word · Ajustes de formato (APA) · Combinar correspondencia · Referencias · Complementos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Tener una herramienta de redacción de textos con carácter más académico y científico, para proyectos de estudio.</dd></div>
-      </dl>
-    </article>
+      <section class="course-group" data-area="Investigación y escritura académica">
+        <h2 class="group-title">Investigación y escritura académica <span class="group-count">· 6</span></h2>
+        <div class="tile-grid">
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="word documentos academicos apa referencias combinar correspondencia">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Word">
+            <span class="sw-logo"><img src="assets/logos/word.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Word</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-word">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/word.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-word">Word</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta esencial para redacción y formato de documentos académicos, con funciones avanzadas de estilos, referencias y colaboración en tiempo real.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Word · Ajustes de formato (APA) · Combinar correspondencia · Referencias · Complementos</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Tener una herramienta de redacción de textos con carácter más académico y científico, para proyectos de estudio.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="latex overleaf ecuaciones bibliografia citaciones documentos cientificos">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">LaTeX</h2>
-      <p class="card-desc">Sistema de composición tipográfica profesional para documentos científicos, con precisión en fórmulas matemáticas y gestión automatizada de referencias.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a LaTeX · Sintaxis y Overleaf · Gráficos e imágenes en LaTeX · Ecuaciones en LaTeX · Bibliografía y citaciones · Diseño de documentos específicos · Creación de presentaciones</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Tener una herramienta de redacción de textos con carácter más académico y científico, para proyectos de estudio.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="latex overleaf ecuaciones bibliografia citaciones documentos cientificos">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de LaTeX">
+            <span class="sw-logo"><img src="assets/logos/latex.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">LaTeX</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-latex">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/latex.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-latex">LaTeX</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Sistema de composición tipográfica profesional para documentos científicos, con precisión en fórmulas matemáticas y gestión automatizada de referencias.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a LaTeX · Sintaxis y Overleaf · Gráficos e imágenes en LaTeX · Ecuaciones en LaTeX · Bibliografía y citaciones · Diseño de documentos específicos · Creación de presentaciones</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Tener una herramienta de redacción de textos con carácter más académico y científico, para proyectos de estudio.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="zotero referencias bibliografia open source">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">Zotero</h2>
-      <p class="card-desc">Herramienta gratuita y open-source para recolectar, organizar y citar fuentes bibliográficas en trabajos científicos, con integración en navegadores y procesadores de texto.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Referenciación (APA) · Otros estilos de referenciación</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo de organizar las referencias bibliográficas en los textos universitarios y académicos.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="zotero referencias bibliografia open source">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Zotero">
+            <span class="sw-logo"><img src="assets/logos/zotero.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Zotero</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-zotero">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/zotero.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-zotero">Zotero</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Herramienta gratuita y open-source para recolectar, organizar y citar fuentes bibliográficas en trabajos científicos, con integración en navegadores y procesadores de texto.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Referenciación (APA) · Otros estilos de referenciación</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo de organizar las referencias bibliográficas en los textos universitarios y académicos.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="mendeley gestor de referencias bibliografia citacion">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">Mendeley</h2>
-      <p class="card-desc">Gestor de referencias y red social académica que facilita la organización de bibliografía, citación automática y colaboración en investigación.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Referenciación (APA) · Otros estilos de referenciación · Integración con NVivo</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo de organizar las referencias bibliográficas en los textos universitarios y académicos.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="mendeley gestor de referencias bibliografia citacion">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Mendeley">
+            <span class="sw-logo"><img src="assets/logos/mendeley.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Mendeley</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-mendeley">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/mendeley.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-mendeley">Mendeley</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Gestor de referencias y red social académica que facilita la organización de bibliografía, citación automática y colaboración en investigación.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Referenciación (APA) · Otros estilos de referenciación · Integración con NVivo</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1)</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Facilitar el trabajo de organizar las referencias bibliográficas en los textos universitarios y académicos.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="nvivo analisis cualitativo entrevistas codificacion">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">NVivo</h2>
-      <p class="card-desc">Plataforma especializada para análisis de datos cualitativos (entrevistas, encuestas), que permite codificación, categorización y modelado de información no estructurada.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a NVivo · Codificación y consultas · Análisis de audios y videos · Análisis de entrevistas · Visualización de datos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Poner en práctica la herramienta con la técnica de investigación, donde la información cualitativa también revela información valiosa.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="nvivo analisis cualitativo entrevistas codificacion">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de NVivo">
+            <span class="sw-logo"><img src="assets/logos/nvivo.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">NVivo</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-nvivo">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/nvivo.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-nvivo">NVivo</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma especializada para análisis de datos cualitativos (entrevistas, encuestas), que permite codificación, categorización y modelado de información no estructurada.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a NVivo · Codificación y consultas · Análisis de audios y videos · Análisis de entrevistas · Visualización de datos</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Poner en práctica la herramienta con la técnica de investigación, donde la información cualitativa también revela información valiosa.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Investigación y escritura académica" data-search="qgis mapas territorio urbanismo croquis">
-      <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
-      <h2 class="card-title">QGIS</h2>
-      <p class="card-desc">Plataforma líder en análisis espacial y mapeo digital, aplicable a estudios económicos, urbanísticos y de gestión de recursos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a QGIS · Interfaz · Mapas · Exploración de territorios · Croquis</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por sesión</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Aprovechar el programa como herramienta en proyectos de gestión urbana o territorial.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Investigación y escritura académica" data-search="qgis mapas territorio urbanismo croquis">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de QGIS">
+            <span class="sw-logo"><img src="assets/logos/qgis.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">QGIS</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-qgis">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/qgis.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Investigación y escritura académica</span></p>
+                <h2 class="card-title" id="sw-qgis">QGIS</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Plataforma líder en análisis espacial y mapeo digital, aplicable a estudios económicos, urbanísticos y de gestión de recursos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a QGIS · Interfaz · Mapas · Exploración de territorios · Croquis</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por sesión</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Aprovechar el programa como herramienta en proyectos de gestión urbana o territorial.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
+        </div>
+      </section>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="python ciencia de datos numpy pandas matplotlib ia">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">Python</h2>
-      <p class="card-desc">Lenguaje multipropósito dominante en ciencia de datos. Usado para análisis económicos, automatización, inteligencia artificial y procesamiento de datos.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Python · Sintaxis · Librerías · Numpy · Pandas · Matplotlib</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en programación y su relación con distintas metodologías del desarrollo profesional de la carrera.</dd></div>
-      </dl>
-    </article>
+      <section class="course-group" data-area="Econometría y programación">
+        <h2 class="group-title">Econometría y programación <span class="group-count">· 4</span></h2>
+        <div class="tile-grid">
+        <article class="course-card" data-area="Econometría y programación" data-search="python ciencia de datos numpy pandas matplotlib ia">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de Python">
+            <span class="sw-logo"><img src="assets/logos/python.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">Python</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-python">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/python.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+                <h2 class="card-title" id="sw-python">Python</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Lenguaje multipropósito dominante en ciencia de datos. Usado para análisis económicos, automatización, inteligencia artificial y procesamiento de datos.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Python · Sintaxis · Librerías · Numpy · Pandas · Matplotlib</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en programación y su relación con distintas metodologías del desarrollo profesional de la carrera.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="rstudio r estadistica regresiones inferencia">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">RStudio (R)</h2>
-      <p class="card-desc">Entorno para programación en R, especializado en estadística avanzada, modelado predictivo y visualización científica. Código abierto y colaborativo.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a RStudio · Interfaz y sintaxis · Estadística descriptiva · Probabilidad · Inferencia estadística · Regresiones</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar conceptos como probabilidad y estadística fundamental.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Econometría y programación" data-search="rstudio r estadistica regresiones inferencia">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de RStudio (R)">
+            <span class="sw-logo"><img src="assets/logos/rstudio.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">RStudio (R)</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-rstudio-r">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/rstudio.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+                <h2 class="card-title" id="sw-rstudio-r">RStudio (R)</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Entorno para programación en R, especializado en estadística avanzada, modelado predictivo y visualización científica. Código abierto y colaborativo.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a RStudio · Interfaz y sintaxis · Estadística descriptiva · Probabilidad · Inferencia estadística · Regresiones</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar conceptos como probabilidad y estadística fundamental.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="stata econometria series temporales encuestas">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">STATA</h2>
-      <p class="card-desc">Entorno estadístico intuitivo especializado en ciencias sociales, con sintaxis simplificada para econometría, series temporales y análisis de encuestas.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a STATA · Interfaz y sintaxis · Regresiones · Evaluación de impacto · Creación y edición de gráficos</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar los conceptos vistos en clase.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Econometría y programación" data-search="stata econometria series temporales encuestas">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de STATA">
+            <span class="sw-logo"><img src="assets/logos/stata.svg" alt="" loading="lazy"></span>
+            <span class="sw-name">STATA</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-stata">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/stata.svg" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+                <h2 class="card-title" id="sw-stata">STATA</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Entorno estadístico intuitivo especializado en ciencias sociales, con sintaxis simplificada para econometría, series temporales y análisis de encuestas.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a STATA · Interfaz y sintaxis · Regresiones · Evaluación de impacto · Creación y edición de gráficos</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Fortalecer las habilidades en software estadístico y repasar los conceptos vistos en clase.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
 
-    <article class="course-card" data-area="Econometría y programación" data-search="matlab modelado matematico dynare ecuaciones algebra">
-      <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
-      <h2 class="card-title">MATLAB</h2>
-      <p class="card-desc">Entorno de programación avanzado para modelado matemático, análisis de datos y desarrollo de algoritmos aplicados a teorías económicas y financieras.</p>
-      <dl class="card-meta">
-        <div><dt>Temas</dt><dd>Introducción a Matlab · Dynare · Ecuaciones diferenciales · Álgebra lineal · Optimización estática y dinámica</dd></div>
-        <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
-        <div><dt>Aporte a las asignaturas</dt><dd>Mostrar el desarrollo de los conceptos vistos en los componentes cuantitativos y su aplicación a las diversas teorías económicas.</dd></div>
-      </dl>
-    </article>
+        <article class="course-card" data-area="Econometría y programación" data-search="matlab modelado matematico dynare ecuaciones algebra">
+          <button type="button" class="sw-tile" aria-haspopup="dialog" aria-label="Ver detalle de MATLAB">
+            <span class="sw-logo"><img src="assets/logos/matlab.png" alt="" loading="lazy"></span>
+            <span class="sw-name">MATLAB</span>
+          </button>
+          <dialog class="sw-dialog" aria-labelledby="sw-matlab">
+            <div class="dlg-head">
+              <span class="dlg-logo"><img src="assets/logos/matlab.png" alt="" loading="lazy"></span>
+              <div class="dlg-title">
+                <p class="card-eyebrow"><span class="area-tag">Econometría y programación</span></p>
+                <h2 class="card-title" id="sw-matlab">MATLAB</h2>
+              </div>
+              <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+            </div>
+            <div class="dlg-body">
+              <p class="card-desc">Entorno de programación avanzado para modelado matemático, análisis de datos y desarrollo de algoritmos aplicados a teorías económicas y financieras.</p>
+              <dl class="card-meta">
+            <div><dt>Temas</dt><dd>Introducción a Matlab · Dynare · Ecuaciones diferenciales · Álgebra lineal · Optimización estática y dinámica</dd></div>
+            <div><dt>Sesiones sugeridas</dt><dd class="mono">Una (1) o dos (2) por tema</dd></div>
+            <div><dt>Aporte a las asignaturas</dt><dd>Mostrar el desarrollo de los conceptos vistos en los componentes cuantitativos y su aplicación a las diversas teorías económicas.</dd></div>
+          </dl>
+            </div>
+          </dialog>
+        </article>
+        </div>
+      </section>
 
-    </section>
+    </div>
 
     <p class="no-results" id="no-results" hidden>Ningún software coincide con esos filtros. Intenta con otro término o área.</p>
 

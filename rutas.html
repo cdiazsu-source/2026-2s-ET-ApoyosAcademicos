@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#00005c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..900;1,100..900&family=Ancizar+Serif:ital,wght@1,300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,8 +20,8 @@
       <p class="top-text">Cinco áreas pensadas para la Facultad de Ciencias Económicas: elige la que mejor encaje con tu asignatura.</p>
     </div>
     <a class="logo-tab" href="index.html" aria-label="UiFCE — Apoyos Académicos, ir al inicio">
-      <span class="logo-mark">UiFCE</span>
-      <span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span>
+      <span class="tab-face tab-title"><span class="logo-mark">UiFCE</span><span class="logo-sub"><span>Apoyos</span><span>Académicos</span></span></span>
+      <span class="tab-face tab-official" role="img" aria-label="Logo oficial de la UIFCE: Unidad de Informática de la Facultad de Ciencias Económicas"></span>
     </a>
     <div class="top-card">
       <p class="kicker">¿Cómo solicitarlo?</p>
@@ -29,6 +29,7 @@
         <li><span class="step-chip">1</span><span>Elige la<br>herramienta</span></li>
         <li><span class="step-chip">2</span><span>Diligencia el<br>formulario</span></li>
         <li><span class="step-chip">3</span><span>Agenda fecha<br>y espacio</span></li>
+        <li><span class="step-chip">4</span><span>Espera la comunicación<br>de la UIFCE</span></li>
       </ol>
     </div>
   </header>
@@ -53,67 +54,67 @@
       <div class="track" data-area="Docencia y herramientas digitales">
         <h2 class="track-name">Docencia y herramientas digitales <span class="track-count">· 8</span></h2>
         <p class="track-desc">Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la <strong>IA</strong> de forma responsable en tu docencia.</p>
-        <ul>
-          <li>Moodle</li>
-          <li>Zoom</li>
-          <li>Microsoft Teams</li>
-          <li>Google Workspace</li>
-          <li>H5P</li>
-          <li>Articulate</li>
-          <li>Mind Manager</li>
-          <li>Inteligencia Artificial (IA)</li>
+        <ul class="with-logos">
+          <li><img class="mini-logo" src="assets/logos/moodle.svg" alt="" loading="lazy">Moodle</li>
+          <li><img class="mini-logo" src="assets/logos/zoom.svg" alt="" loading="lazy">Zoom</li>
+          <li><img class="mini-logo" src="assets/logos/teams.svg" alt="" loading="lazy">Microsoft Teams</li>
+          <li><img class="mini-logo" src="assets/logos/gworkspace.svg" alt="" loading="lazy">Google Workspace</li>
+          <li><img class="mini-logo" src="assets/logos/h5p.svg" alt="" loading="lazy">H5P</li>
+          <li><img class="mini-logo" src="assets/logos/articulate.svg" alt="" loading="lazy">Articulate</li>
+          <li><img class="mini-logo" src="assets/logos/mind-manager.svg" alt="" loading="lazy">Mind Manager</li>
+          <li><img class="mini-logo" src="assets/logos/ia.svg" alt="" loading="lazy">Inteligencia Artificial (IA)</li>
         </ul>
       </div>
 
       <div class="track" data-area="Análisis de datos y BI">
         <h2 class="track-name">Análisis de datos y BI <span class="track-count">· 8</span></h2>
         <p class="track-desc">Hojas de cálculo, bases de datos y tableros de BI para que tus estudiantes trabajen y visualicen información económica.</p>
-        <ul>
-          <li>Excel</li>
-          <li>Google Sheets</li>
-          <li>Access</li>
-          <li>MySQL</li>
-          <li>PostgreSQL</li>
-          <li>Power BI</li>
-          <li>Tableau</li>
-          <li>Looker Studio</li>
+        <ul class="with-logos">
+          <li><img class="mini-logo" src="assets/logos/excel.svg" alt="" loading="lazy">Excel</li>
+          <li><img class="mini-logo" src="assets/logos/google-sheets.svg" alt="" loading="lazy">Google Sheets</li>
+          <li><img class="mini-logo" src="assets/logos/access.svg" alt="" loading="lazy">Access</li>
+          <li><img class="mini-logo" src="assets/logos/mysql.svg" alt="" loading="lazy">MySQL</li>
+          <li><img class="mini-logo" src="assets/logos/postgresql.svg" alt="" loading="lazy">PostgreSQL</li>
+          <li><img class="mini-logo" src="assets/logos/powerbi.svg" alt="" loading="lazy">Power BI</li>
+          <li><img class="mini-logo" src="assets/logos/tableau.svg" alt="" loading="lazy">Tableau</li>
+          <li><img class="mini-logo" src="assets/logos/looker.svg" alt="" loading="lazy">Looker Studio</li>
         </ul>
       </div>
 
       <div class="track" data-area="Gestión y sistemas empresariales">
         <h2 class="track-name">Gestión y sistemas empresariales <span class="track-count">· 6</span></h2>
         <p class="track-desc">Software contable, ERP y de procesos para llevar a la práctica tus clases de administración, contabilidad y gestión.</p>
-        <ul>
-          <li>Odoo</li>
-          <li>SAP</li>
-          <li>Siigo</li>
-          <li>World Office</li>
-          <li>Bizagi</li>
-          <li>Trello</li>
+        <ul class="with-logos">
+          <li><img class="mini-logo" src="assets/logos/odoo.svg" alt="" loading="lazy">Odoo</li>
+          <li><img class="mini-logo" src="assets/logos/sap.svg" alt="" loading="lazy">SAP</li>
+          <li><img class="mini-logo" src="assets/logos/siigo.svg" alt="" loading="lazy">Siigo</li>
+          <li><img class="mini-logo" src="assets/logos/world-office.svg" alt="" loading="lazy">World Office</li>
+          <li><img class="mini-logo" src="assets/logos/bizagi.svg" alt="" loading="lazy">Bizagi</li>
+          <li><img class="mini-logo" src="assets/logos/trello.svg" alt="" loading="lazy">Trello</li>
         </ul>
       </div>
 
       <div class="track" data-area="Investigación y escritura académica">
         <h2 class="track-name">Investigación y escritura académica <span class="track-count">· 6</span></h2>
         <p class="track-desc">Herramientas para redactar, referenciar y analizar información cualitativa o espacial en tus investigaciones y en las tesis que diriges.</p>
-        <ul>
-          <li>Word</li>
-          <li>LaTeX</li>
-          <li>Zotero</li>
-          <li>Mendeley</li>
-          <li>NVivo</li>
-          <li>QGIS</li>
+        <ul class="with-logos">
+          <li><img class="mini-logo" src="assets/logos/word.svg" alt="" loading="lazy">Word</li>
+          <li><img class="mini-logo" src="assets/logos/latex.svg" alt="" loading="lazy">LaTeX</li>
+          <li><img class="mini-logo" src="assets/logos/zotero.svg" alt="" loading="lazy">Zotero</li>
+          <li><img class="mini-logo" src="assets/logos/mendeley.svg" alt="" loading="lazy">Mendeley</li>
+          <li><img class="mini-logo" src="assets/logos/nvivo.svg" alt="" loading="lazy">NVivo</li>
+          <li><img class="mini-logo" src="assets/logos/qgis.svg" alt="" loading="lazy">QGIS</li>
         </ul>
       </div>
 
       <div class="track" data-area="Econometría y programación">
         <h2 class="track-name">Econometría y programación <span class="track-count">· 4</span></h2>
         <p class="track-desc">Lenguajes y paquetes estadísticos para llevar la econometría, la modelación y la ciencia de datos a tus cursos.</p>
-        <ul>
-          <li>Python</li>
-          <li>RStudio (R)</li>
-          <li>STATA</li>
-          <li>MATLAB</li>
+        <ul class="with-logos">
+          <li><img class="mini-logo" src="assets/logos/python.svg" alt="" loading="lazy">Python</li>
+          <li><img class="mini-logo" src="assets/logos/rstudio.svg" alt="" loading="lazy">RStudio (R)</li>
+          <li><img class="mini-logo" src="assets/logos/stata.svg" alt="" loading="lazy">STATA</li>
+          <li><img class="mini-logo" src="assets/logos/matlab.png" alt="" loading="lazy">MATLAB</li>
         </ul>
       </div>
 
