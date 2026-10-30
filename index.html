@@ -44,32 +44,155 @@
   <main>
 
     <section class="area-grid" aria-label="Áreas académicas">
-      <a class="area-card" data-area="Docencia y herramientas digitales" href="catalogo.html#Docencia%20y%20herramientas%20digitales">
+      <button type="button" class="area-card" data-area="Docencia y herramientas digitales" aria-haspopup="dialog" aria-controls="area-docencia-y-herramientas-digitales">
+        <svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 3 19l21 11 21-11L24 8Z"/><path d="M11 25v9c0 3 6 6 13 6s13-3 13-6v-9"/><path d="M45 19v13"/></svg>
         <h2>Docencia y herramientas digitales</h2>
-        <p>Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la <strong>IA</strong> de forma responsable en tu docencia.</p>
-        <span class="area-link">8 softwares →</span>
-      </a>
-      <a class="area-card" data-area="Análisis de datos y BI" href="catalogo.html#An%C3%A1lisis%20de%20datos%20y%20BI">
+      </button>
+      <button type="button" class="area-card" data-area="Análisis de datos y BI" aria-haspopup="dialog" aria-controls="area-analisis-de-datos-y-bi">
+        <svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="26" width="8" height="14" rx="1.5"/><rect x="20" y="16" width="8" height="24" rx="1.5"/><rect x="33" y="7" width="8" height="33" rx="1.5"/><path d="M4 44h40"/></svg>
         <h2>Análisis de datos y BI</h2>
-        <p>Hojas de cálculo, bases de datos y tableros de BI para que tus estudiantes trabajen y visualicen información económica.</p>
-        <span class="area-link">8 softwares →</span>
-      </a>
-      <a class="area-card" data-area="Gestión y sistemas empresariales" href="catalogo.html#Gesti%C3%B3n%20y%20sistemas%20empresariales">
+      </button>
+      <button type="button" class="area-card" data-area="Gestión y sistemas empresariales" aria-haspopup="dialog" aria-controls="area-gestion-y-sistemas-empresariales">
+        <svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="17" y="5" width="14" height="10" rx="2"/><rect x="3" y="33" width="14" height="10" rx="2"/><rect x="17" y="33" width="14" height="10" rx="2"/><rect x="31" y="33" width="14" height="10" rx="2"/><path d="M24 15v18M10 33v-7h28v7"/></svg>
         <h2>Gestión y sistemas empresariales</h2>
-        <p>Software contable, ERP y de procesos para llevar a la práctica tus clases de administración, contabilidad y gestión.</p>
-        <span class="area-link">6 softwares →</span>
-      </a>
-      <a class="area-card" data-area="Investigación y escritura académica" href="catalogo.html#Investigaci%C3%B3n%20y%20escritura%20acad%C3%A9mica">
+      </button>
+      <button type="button" class="area-card" data-area="Investigación y escritura académica" aria-haspopup="dialog" aria-controls="area-investigacion-y-escritura-academica">
+        <svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 6H12a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h12"/><path d="M27 6l9 9v5"/><path d="M27 6v9h9"/><path d="M15 22h10M15 29h6"/><circle cx="34" cy="32" r="7"/><path d="m39.5 37.5 5 5"/></svg>
         <h2>Investigación y escritura académica</h2>
-        <p>Herramientas para redactar, referenciar y analizar información cualitativa o espacial en tus investigaciones y en las tesis que diriges.</p>
-        <span class="area-link">6 softwares →</span>
-      </a>
-      <a class="area-card" data-area="Econometría y programación" href="catalogo.html#Econometr%C3%ADa%20y%20programaci%C3%B3n">
+      </button>
+      <button type="button" class="area-card" data-area="Econometría y programación" aria-haspopup="dialog" aria-controls="area-econometria-y-programacion">
+        <svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="m16 14-10 10 10 10M32 14l10 10-10 10M28 8l-8 32"/></svg>
         <h2>Econometría y programación</h2>
-        <p>Lenguajes y paquetes estadísticos para llevar la econometría, la modelación y la ciencia de datos a tus cursos.</p>
-        <span class="area-link">4 softwares →</span>
-      </a>
+      </button>
     </section>
+
+    <dialog class="sw-dialog area-dialog" id="area-docencia-y-herramientas-digitales" data-area="Docencia y herramientas digitales" aria-labelledby="area-docencia-y-herramientas-digitales-t">
+      <div class="dlg-head">
+        <span class="dlg-logo"><svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 3 19l21 11 21-11L24 8Z"/><path d="M11 25v9c0 3 6 6 13 6s13-3 13-6v-9"/><path d="M45 19v13"/></svg></span>
+        <div class="dlg-title">
+          <p class="kicker">8 softwares en esta área</p>
+          <h2 class="card-title" id="area-docencia-y-herramientas-digitales-t">Docencia y herramientas digitales</h2>
+        </div>
+        <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="dlg-body">
+        <p class="card-desc">Plataformas para dictar clases, virtualizar contenidos, colaborar y usar la <strong>IA</strong> de forma responsable en tu docencia.</p>
+        <p class="kicker dlg-sub">Apoyos que se dan en esta área</p>
+        <ul class="dlg-logos">
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/moodle.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Moodle</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/zoom.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Zoom</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/teams.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Microsoft Teams</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/gworkspace.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Google Workspace</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/h5p.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">H5P</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/articulate.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Articulate</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/mind-manager.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Mind Manager</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/ia.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Inteligencia Artificial (IA)</span></li>
+        </ul>
+        <div class="dlg-actions">
+          <a class="btn" href="catalogo.html#Docencia%20y%20herramientas%20digitales">Ver catálogo de software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="sw-dialog area-dialog" id="area-analisis-de-datos-y-bi" data-area="Análisis de datos y BI" aria-labelledby="area-analisis-de-datos-y-bi-t">
+      <div class="dlg-head">
+        <span class="dlg-logo"><svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="26" width="8" height="14" rx="1.5"/><rect x="20" y="16" width="8" height="24" rx="1.5"/><rect x="33" y="7" width="8" height="33" rx="1.5"/><path d="M4 44h40"/></svg></span>
+        <div class="dlg-title">
+          <p class="kicker">8 softwares en esta área</p>
+          <h2 class="card-title" id="area-analisis-de-datos-y-bi-t">Análisis de datos y BI</h2>
+        </div>
+        <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="dlg-body">
+        <p class="card-desc">Hojas de cálculo, bases de datos y tableros de BI para que tus estudiantes trabajen y visualicen información económica.</p>
+        <p class="kicker dlg-sub">Apoyos que se dan en esta área</p>
+        <ul class="dlg-logos">
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/excel.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Excel</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/google-sheets.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Google Sheets</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/access.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Access</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/mysql.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">MySQL</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/postgresql.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">PostgreSQL</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/powerbi.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Power BI</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/tableau.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Tableau</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/looker.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Looker Studio</span></li>
+        </ul>
+        <div class="dlg-actions">
+          <a class="btn" href="catalogo.html#An%C3%A1lisis%20de%20datos%20y%20BI">Ver catálogo de software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="sw-dialog area-dialog" id="area-gestion-y-sistemas-empresariales" data-area="Gestión y sistemas empresariales" aria-labelledby="area-gestion-y-sistemas-empresariales-t">
+      <div class="dlg-head">
+        <span class="dlg-logo"><svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="17" y="5" width="14" height="10" rx="2"/><rect x="3" y="33" width="14" height="10" rx="2"/><rect x="17" y="33" width="14" height="10" rx="2"/><rect x="31" y="33" width="14" height="10" rx="2"/><path d="M24 15v18M10 33v-7h28v7"/></svg></span>
+        <div class="dlg-title">
+          <p class="kicker">6 softwares en esta área</p>
+          <h2 class="card-title" id="area-gestion-y-sistemas-empresariales-t">Gestión y sistemas empresariales</h2>
+        </div>
+        <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="dlg-body">
+        <p class="card-desc">Software contable, ERP y de procesos para llevar a la práctica tus clases de administración, contabilidad y gestión.</p>
+        <p class="kicker dlg-sub">Apoyos que se dan en esta área</p>
+        <ul class="dlg-logos">
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/odoo.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Odoo</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/sap.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">SAP</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/siigo.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Siigo</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/world-office.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">World Office</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/bizagi.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Bizagi</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/trello.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Trello</span></li>
+        </ul>
+        <div class="dlg-actions">
+          <a class="btn" href="catalogo.html#Gesti%C3%B3n%20y%20sistemas%20empresariales">Ver catálogo de software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="sw-dialog area-dialog" id="area-investigacion-y-escritura-academica" data-area="Investigación y escritura académica" aria-labelledby="area-investigacion-y-escritura-academica-t">
+      <div class="dlg-head">
+        <span class="dlg-logo"><svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 6H12a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h12"/><path d="M27 6l9 9v5"/><path d="M27 6v9h9"/><path d="M15 22h10M15 29h6"/><circle cx="34" cy="32" r="7"/><path d="m39.5 37.5 5 5"/></svg></span>
+        <div class="dlg-title">
+          <p class="kicker">6 softwares en esta área</p>
+          <h2 class="card-title" id="area-investigacion-y-escritura-academica-t">Investigación y escritura académica</h2>
+        </div>
+        <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="dlg-body">
+        <p class="card-desc">Herramientas para redactar, referenciar y analizar información cualitativa o espacial en tus investigaciones y en las tesis que diriges.</p>
+        <p class="kicker dlg-sub">Apoyos que se dan en esta área</p>
+        <ul class="dlg-logos">
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/word.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Word</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/latex.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">LaTeX</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/zotero.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Zotero</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/mendeley.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Mendeley</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/nvivo.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">NVivo</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/qgis.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">QGIS</span></li>
+        </ul>
+        <div class="dlg-actions">
+          <a class="btn" href="catalogo.html#Investigaci%C3%B3n%20y%20escritura%20acad%C3%A9mica">Ver catálogo de software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="sw-dialog area-dialog" id="area-econometria-y-programacion" data-area="Econometría y programación" aria-labelledby="area-econometria-y-programacion-t">
+      <div class="dlg-head">
+        <span class="dlg-logo"><svg class="area-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="m16 14-10 10 10 10M32 14l10 10-10 10M28 8l-8 32"/></svg></span>
+        <div class="dlg-title">
+          <p class="kicker">4 softwares en esta área</p>
+          <h2 class="card-title" id="area-econometria-y-programacion-t">Econometría y programación</h2>
+        </div>
+        <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="dlg-body">
+        <p class="card-desc">Lenguajes y paquetes estadísticos para llevar la econometría, la modelación y la ciencia de datos a tus cursos.</p>
+        <p class="kicker dlg-sub">Apoyos que se dan en esta área</p>
+        <ul class="dlg-logos">
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/python.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">Python</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/rstudio.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">RStudio (R)</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/stata.svg" alt="" loading="lazy"></span><span class="dlg-sw-name">STATA</span></li>
+          <li class="dlg-sw"><span class="dlg-sw-logo"><img src="assets/logos/matlab.png" alt="" loading="lazy"></span><span class="dlg-sw-name">MATLAB</span></li>
+        </ul>
+        <div class="dlg-actions">
+          <a class="btn" href="catalogo.html#Econometr%C3%ADa%20y%20programaci%C3%B3n">Ver catálogo de software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </dialog>
 
     <section class="stats" aria-label="Resumen de los Apoyos Académicos">
       <div class="stat"><span class="stat-value">32</span><span class="stat-label">Softwares disponibles</span></div>
@@ -135,5 +258,6 @@
 
 <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
 
+<script src="areas.js"></script>
 </body>
 </html>
