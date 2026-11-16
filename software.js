@@ -425,7 +425,7 @@
     "siigo": {
       "name": "Siigo",
       "area": "Gestión y sistemas empresariales",
-      "logo": "assets/logos/siigo.svg",
+      "logo": "assets/logos/siigo.png",
       "desc": "Software contable y ERP amigable, ideal para aprender fundamentos de facturación, reporting financiero y flujos de trabajo con una interfaz intuitiva.",
       "rows": [
         [
@@ -494,7 +494,7 @@
     "trello": {
       "name": "Trello",
       "area": "Gestión y sistemas empresariales",
-      "logo": "assets/logos/trello.svg",
+      "logo": "assets/logos/trello.png",
       "desc": "Plataforma intuitiva de gestión de proyectos basada en tableros visuales, que permite organizar tareas, colaborar en equipo y mejorar la productividad con un enfoque ágil y flexible.",
       "rows": [
         [
@@ -609,7 +609,7 @@
     "nvivo": {
       "name": "NVivo",
       "area": "Investigación y escritura académica",
-      "logo": "assets/logos/nvivo.svg",
+      "logo": "assets/logos/nvivo.png",
       "desc": "Plataforma especializada para análisis de datos cualitativos (entrevistas, encuestas), que permite codificación, categorización y modelado de información no estructurada.",
       "rows": [
         [
