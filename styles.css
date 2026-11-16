@@ -165,47 +165,11 @@ a { color: var(--yellow); }
   text-decoration: none;
 }
 
-/* La pestaña alterna entre el título y el logo animado (GIF) de la Unidad de Informática; el ciclo
-   de 14 s debe coincidir con CYCLE en logo-tab.js */
-.tab-face {
-  grid-area: 1 / 1;
-  display: flex;
-  align-items: center;
-  gap: clamp(8px, 1vw, 14px);
-}
-
-.tab-title { animation: tab-title 14s ease-in-out infinite; }
-
-.tab-official {
-  position: relative;
-  opacity: 0;
-  animation: tab-official 14s ease-in-out infinite;
-}
-
-.tab-official img {
-  position: absolute;
-  top: calc(-1 * clamp(6px, 0.9vw, 14px));
-  left: -8px;
-  width: calc(100% + 16px);
-  height: calc(100% + clamp(6px, 0.9vw, 14px) + clamp(8px, 1vw, 16px));
-  object-fit: contain;
-}
-
-@keyframes tab-title {
-  0%, 40% { opacity: 1; }
-  47%, 90% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes tab-official {
-  0%, 40% { opacity: 0; }
-  47%, 90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tab-title, .tab-official { animation: none !important; }
-  .tab-official { opacity: 0; }
+/* Logo del proyecto: marca UiFCE original con "Apoyos Académicos" al lado */
+.logo-img {
+  display: block;
+  width: clamp(250px, 34vw, 540px);
+  height: auto;
 }
 
 .logo-tab::before,
@@ -227,27 +191,6 @@ a { color: var(--yellow); }
   left: 100%;
   background: radial-gradient(circle at 100% 100%, transparent 35px, #fff 36px);
 }
-
-.logo-mark {
-  font-family: var(--font-brand);
-  font-weight: 700;
-  font-size: clamp(3rem, 6.2vw, 6rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-  -webkit-text-stroke: 0.03em currentColor;
-}
-
-.logo-sub {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-brand);
-  font-weight: 600;
-  line-height: 0.92;
-  color: var(--logo);
-}
-
-.logo-sub span:first-child { font-size: clamp(1.9rem, 3.5vw, 3.3rem); }
-.logo-sub span:last-child  { font-size: clamp(1.45rem, 2.7vw, 2.55rem); }
 
 /* Mini pasos (¿Cómo solicitarlo?) */
 .mini-steps {
@@ -478,9 +421,10 @@ a { color: var(--yellow); }
   width: 68px;
   height: 68px;
   padding: 10px;
-  border: 4px solid var(--yellow);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-top: 6px solid var(--accent, var(--yellow));
   border-radius: 18px;
-  background: var(--poster-bg);
+  background: var(--card);
 }
 
 .dlg-sw-logo img {
@@ -741,9 +685,11 @@ a { color: var(--yellow); }
   width: 100%;
   aspect-ratio: 1;
   padding: clamp(8px, 1vw, 14px) clamp(8px, 1vw, 14px) clamp(12px, 1.4vw, 18px);
-  border: clamp(8px, 1vw, 13px) solid var(--yellow);
+  /* Ficha estilo cartelera: fondo azul marino, borde tenue y franja superior del color del área */
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-top: clamp(8px, 1vw, 12px) solid var(--accent, var(--yellow));
   border-radius: clamp(24px, 2.6vw, 36px);
-  background: var(--poster-bg);
+  background: var(--card);
   color: var(--text);
   font: inherit;
   cursor: pointer;
@@ -752,7 +698,9 @@ a { color: var(--yellow); }
 
 .sw-tile:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(245, 236, 0, 0.28);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent, var(--yellow)) 35%, transparent);
+  border-color: color-mix(in srgb, var(--accent, var(--yellow)) 60%, transparent);
+  border-top-color: var(--accent, var(--yellow));
 }
 
 .sw-tile:active { transform: scale(0.98); }
@@ -819,9 +767,10 @@ a { color: var(--yellow); }
   width: 78px;
   height: 78px;
   padding: 10px;
-  border: 5px solid var(--yellow);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-top: 7px solid var(--accent, var(--yellow));
   border-radius: 20px;
-  background: var(--poster-bg);
+  background: var(--card);
 }
 
 .dlg-logo img {
@@ -1322,7 +1271,7 @@ a { color: var(--yellow); }
   .tile-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .sw-name { font-size: 0.95rem; }
   .dlg-head { padding: 16px 16px 8px; gap: 12px; }
-  .dlg-logo { width: 60px; height: 60px; border-width: 4px; }
+  .dlg-logo { width: 60px; height: 60px; border-width: 2px; border-top-width: 6px; }
   .dlg-body { padding: 4px 16px 22px; }
   .area-tag { border-radius: 12px; line-height: 1.25; }
 
@@ -1340,11 +1289,6 @@ a { color: var(--yellow); }
 
 h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
 
-/* Logo de la pestaña: peso máximo en lugar del trazo artificial */
-.logo-mark { font-weight: 900; -webkit-text-stroke: 0; letter-spacing: -0.045em; }
-.logo-sub { font-family: var(--font-brand); font-weight: 700; line-height: 0.95; letter-spacing: -0.02em; }
-.logo-sub span:first-child { font-size: clamp(1.6rem, 3vw, 2.9rem); }
-.logo-sub span:last-child  { font-size: clamp(1.15rem, 2.15vw, 2.05rem); }
 
 /* Textos de apoyo de la cartelera: cursiva en la misma familia */
 .kicker, .top-text, .mini-steps li, .help-text,
@@ -1366,3 +1310,49 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
 .result-count { font-size: 1rem; }
 .card-meta dt { font-weight: 700; font-size: 0.95rem; }
 .group-count, .track-count { font-weight: 700; font-size: 1rem; }
+
+/* ============================================================
+   Apoyos clicables fuera del catálogo (inicio y rutas por área)
+   ============================================================ */
+
+.dlg-sw,
+.sw-link {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease-out-strong);
+}
+
+.dlg-sw { width: 100%; padding: 4px 0; border-radius: 14px; }
+.dlg-sw:hover { transform: translateY(-3px); }
+.dlg-sw:hover .dlg-sw-logo { border-color: rgba(255, 255, 255, 0.4); border-top-color: var(--accent, var(--yellow)); }
+.dlg-sw:hover .dlg-sw-name { color: var(--text); }
+
+.sw-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 4px 8px;
+  margin: -4px -8px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: inherit;
+}
+.sw-link:hover { background: rgba(255, 255, 255, 0.07); transform: translateX(3px); }
+.sw-link::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  border-right: 2px solid var(--accent, var(--yellow));
+  border-top: 2px solid var(--accent, var(--yellow));
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.dlg-sw:focus-visible,
+.sw-link:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
